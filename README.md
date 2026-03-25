@@ -1,5 +1,5 @@
 # GCSE REVISION
-Here I post Revision resources for the gcse:
+Here I post Revision resources for the gcse, mostly with claude ai:
 
 So far Geography
 [Geography Revision Resource
