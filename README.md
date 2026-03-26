@@ -1,9 +1,11 @@
 # GCSE REVISION
-Here I post Revision resources for the gcse, mostly with claude ai:
+Here I post Revision resources for the gcse, mostly made with claude ai:
 
-So far Geography
-[Geography Revision Resource
-](https://snakyspi-prog.github.io/Revision/geo_mindmap.html)
+## What exists so far?
+[Geography](https://snakyspi-prog.github.io/Revision/geo_mindmap.html)
 
 
-[go](http://stackoverflow.com){:target="_blank"}
+## Currently under construction:
+- Computer studies
+- Physics
+- Chem
