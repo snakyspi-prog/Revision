@@ -331,7 +331,7 @@ const CONTENT = {
   // ── COASTS TOPICS ──
   erosion:{title:'Types of Erosion',badge:'Coasts',sec:'coasts',
     def:'Coastal erosion is the wearing away of rock and sediment by wave action.',
-    facts:['Hydraulic action: waves compress air into cracks → rock shatters','Corrasion: waves hurl sediment at cliff base — most destructive','Abrasion: sediment grinds along shore platform like sandpaper','Attrition: particles collide with each other → smaller & rounder','Solution (Corrosion): seawater dissolves soluble rocks (limestone, chalk)','Erosion rate depends on: wave energy, rock type, cliff shape'],
+    facts:['Constructive waves: strong swash, weak backwash, low frequency, low height — DEPOSITIONAL','Destructive waves: strong backwash, weak swash, high frequency, high height — EROSIONAL (long fetch)','Hydraulic action: waves compress air into cracks → rock shatters','Corrasion: waves hurl sediment at cliff base','Abrasion: sediment grinds along shore platform like sandpaper','Attrition: particles collide with each other → smaller & rounder','Solution (Corrosion): seawater dissolves soluble rocks (limestone, chalk)','Erosion rate depends on: wave energy, rock type, cliff shape'],
     tip:'Mnemonic: HCAAS — Hydraulic, Corrasion, Abrasion, Attrition, Solution',
     mnemonic:'H-C-A-A-S',
     related:['coastlines','caves','holderness']},
@@ -344,7 +344,7 @@ const CONTENT = {
 
   caves:{title:'Caves, Arches, Stacks & Stumps',badge:'Coasts',sec:'coasts',
     def:'A sequence of erosional landforms formed progressively on a headland. Each stage leads to the next.',
-    facts:['1. Cracks: hydraulic action + abrasion attack weaknesses in headland','2. Caves: cracks deepen and widen — especially at base of cliff','3. Arch: cave breaks through the headland creating an archway','4. Stack: arch roof collapses → isolated pillar of rock remains','5. Stump: stack erodes further until only a low platform remains','6. Wave-cut platform: remains after stump disappears, exposed at low tide'],
+    facts:['Wave-cut notch: erosion attacks cliff base between high and low tide → notch forms → cliff overhangs','Wave-cut platform: cliff collapses repeatedly → flat rock platform left at base visible at low tide','1. Cracks: hydraulic action + abrasion attack weaknesses in headland','2. Caves: cracks deepen and widen — especially at base of cliff','3. Arch: cave breaks through the headland creating an archway','4. Stack: arch roof collapses → isolated pillar of rock remains','5. Stump: stack erodes further until only a low platform remains','6. Wave-cut platform: remains after stump disappears, exposed at low tide'],
     tip:'Sequence: Crack → Cave → Arch → Stack → Stump (CCASS)',
     mnemonic:'C-C-A-S-S',
     related:['erosion','coastlines']},
@@ -482,20 +482,20 @@ const CONTENT = {
 
   riverosion:{title:'River Erosion',badge:'Rivers',sec:'rivers',
     def:'Rivers erode their channel through four processes — identical names to coastal erosion but different contexts.',
-    facts:['Hydraulic action: force of water itself erodes bed and banks; air forced into cracks','Abrasion (corrasion): sediment carried by river scrapes/grinds bed and banks — most important process','Attrition: particles carried by river knock together → smaller, rounder, smoother over time','Solution (corrosion): slightly acidic river water dissolves soluble rocks (limestone, chalk)','Vertical erosion: deepens channel — dominant in upper course','Lateral erosion: widens channel — dominant in middle/lower course'],
-    tip:'Same 4 processes as coastal erosion — but in rivers they are H/A/A/S. Abrasion is the most important river erosion process.',
+    facts:['Hydraulic action: force of water itself erodes bed and banks; air forced into cracks','Abrasion: sediment carried by river scrapes and grinds the bed and banks (like sandpaper) — most important river erosion process','Attrition: particles carried by river knock together → smaller, rounder, smoother over time','Solution (corrosion): slightly acidic river water dissolves soluble rocks (limestone, chalk)','Vertical erosion: deepens channel — dominant in upper course','Lateral erosion: widens channel — dominant in middle/lower course'],
+    tip:'IMPORTANT: Corrasion is COASTAL only — rivers use Abrasion. River erosion = H/A/A/S: Hydraulic action, Abrasion, Attrition, Solution.',
     related:['rivertrans','courses','waterfalls']},
 
   rivertrans:{title:'River Transportation',badge:'Rivers',sec:'rivers',
     def:'How rivers carry their sediment (load) — the method depends on particle size and river velocity.',
-    facts:['Traction: largest particles (boulders) rolled along bed by water force','Saltation: sand and gravel bounce along bed in hopping motion','Suspension: fine silt and clay carried within the water (makes river look brown/cloudy)','Solution: dissolved minerals (e.g. calcium carbonate) transported invisibly in the water','Hjulström Curve: shows critical erosion velocity vs settling velocity — clay needs HIGH velocity to erode (cohesive)','Deposition occurs when velocity drops — largest particles deposited first'],
+    facts:['Traction: largest particles (boulders) rolled along bed by water force','Saltation: pebbles and small rocks too heavy to be suspended bounce along the riverbed','Suspension: fine silt and clay carried within the water (makes river look brown/cloudy)','Solution: dissolved minerals (e.g. calcium carbonate) transported invisibly in the water','Hjulström Curve: shows critical erosion velocity vs settling velocity — clay needs HIGH velocity to erode (cohesive)','Deposition occurs when velocity drops — largest particles deposited first'],
     tip:'Transport mnemonic: TSSS — Traction (largest) → Saltation → Suspension → Solution (dissolved)',
     mnemonic:'T-S-S-S (heaviest to lightest)',
     related:['riverosion','courses','floodplains']},
 
   courses:{title:'Upper, Middle & Lower Course',badge:'Rivers',sec:'rivers',
     def:'Rivers change character dramatically from source to mouth as gradient decreases and discharge increases.',
-    facts:['Upper course: steep gradient, V-shaped valley, vertical erosion dominant, interlocking spurs, large angular boulders','Upper features: waterfalls, rapids, gorges','Middle course: gentler gradient, lateral erosion begins, meanders form, sediment more rounded','Middle features: meanders, river cliffs, point bars (slip-off slopes), beginning of floodplain','Lower course: very gentle gradient, very high discharge, deposition dominant, wide floodplain','Lower features: large meanders, oxbow lakes, levées, floodplains, deltas, estuaries'],
+    facts:['Upper course: steep gradient, V-shaped valley, vertical erosion dominant, large angular boulders','Interlocking spurs: river lacks energy to erode hard rock; winds around spurs (ridges) → zigzag pattern from above','Upper features: waterfalls, rapids, gorges','Middle course: gentler gradient, lateral erosion begins, meanders form, sediment more rounded','Thalweg: path of fastest-flowing water; on OUTSIDE of meander bend → erosion (river cliff); INSIDE → deposition (slip-off slope)','Middle features: meanders, river cliffs, point bars (slip-off slopes), beginning of floodplain','Lower course: very gentle gradient, very high discharge, deposition dominant, wide floodplain','Lower features: large meanders, oxbow lakes, levées, floodplains, deltas, estuaries'],
     tip:'Key difference: Upper = vertical erosion + V-valley; Lower = lateral erosion + U/flat valley + deposition',
     related:['riverosion','hydrograph','waterfalls','oxbow','floodplains']},
 
@@ -507,7 +507,7 @@ const CONTENT = {
 
   weathering:{title:'Weathering',badge:'Rivers',sec:'rivers',
     def:'The breakdown of rock IN PLACE (in situ) by physical, chemical or biological processes. Unlike erosion — material is not transported away.',
-    facts:['Physical — Freeze-thaw: water → ice expands 9% → crack widens → rock shatters (common in UK uplands)','Physical — Exfoliation: heating/cooling causes outer layers to peel like onion skin (hot deserts)','Chemical — Carbonation: rain + CO₂ → weak carbonic acid → dissolves limestone (key in karst)','Chemical — Hydrolysis: water reacts with minerals (feldspars in granite) → clay minerals','Chemical — Oxidation: oxygen + iron-bearing minerals → rust → weakens rock','Biological: plant roots in cracks, burrowing animals, acid-producing lichens'],
+    facts:['Physical — Freeze-thaw: water enters crack → freezes and expands by approximately 9–10% → cracks widen → rock shatters (common in UK uplands)','Physical — Exfoliation: heating/cooling causes outer layers to peel like onion skin (hot deserts)','Chemical — Carbonation: rain + CO₂ → weak carbonic acid → dissolves limestone (key in karst)','Chemical — Hydrolysis: water reacts with minerals (feldspars in granite) → clay minerals','Chemical — Oxidation: oxygen + iron-bearing minerals → rust → weakens rock','Biological: plant roots in cracks, burrowing animals, acid-producing lichens'],
     tip:'Remember: weathering = IN PLACE. Erosion = material REMOVED. Chemical weathering is fastest in warm, wet conditions.',
     related:['massmove','riverosion','courses']},
 
@@ -537,7 +537,7 @@ const CONTENT = {
 
   rivermgmt:{title:'Water Management',badge:'Rivers',sec:'rivers',
     def:'Strategies to manage rivers for flood control, water supply, and navigation — hard and soft engineering approaches.',
-    facts:['Hard: dams (flood control + HEP + storage), embankments/levées (contain flood water), channelisation (straightening)','Hard: flood relief channels (e.g. Jubilee River near Windsor)','Soft: flood warning systems (Environment Agency), floodplain zoning, afforestation, river restoration','River restoration: re-meandering straightened rivers to slow water flow and reduce flood peaks','UK issue: water surplus in north and west; deficit in south and east','Climate change is making SE England droughts more frequent; increasing demand from population growth'],
+    facts:['Hard: dams (flood control + HEP + water storage — e.g. Elan Valley, Wales)','Embankments/levées: raised banks increase channel capacity','Channelisation: straightening + lining river with concrete — speeds flow through urban area','Dredging: removing sediment/debris from riverbed — widens channel; must be repeated regularly','Hard: flood relief channels (e.g. Jubilee River near Windsor)','Soft: flood warning systems (Environment Agency), floodplain zoning, afforestation, river restoration','River restoration: re-meandering straightened rivers to slow water flow and reduce flood peaks','UK issue: water surplus in north and west; deficit in south and east','Climate change is making SE England droughts more frequent; increasing demand from population growth'],
     tip:'Hard engineering = faster/more certain flood protection but expensive & may cause downstream problems. Soft = sustainable but slower.',
     related:['hydrograph','floodplains','fieldwork']},
 
@@ -670,6 +670,487 @@ const CONF = {
   green:{s:'#059669',f:'#d1fae5'},
 };
 if(dark){CONF.red.f='#450a0a';CONF.amber.f='#451a03';CONF.green.f='#064e3b';}
+
+
+// ── DIAGRAMS ──────────────────────────────────────────────────────────────
+const DIAGRAMS = {
+
+erosion: `<svg width="100%" viewBox="0 0 274 130" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="130" fill="#f8f9fa" rx="6"/>
+<!-- constructive wave -->
+<rect x="6" y="6" width="128" height="118" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+<text x="70" y="18" text-anchor="middle" font-size="9" font-weight="600" fill="#1e40af">CONSTRUCTIVE</text>
+<path d="M12 75 Q30 50 50 70 Q70 88 90 68 Q110 48 126 65" stroke="#2563eb" stroke-width="2" fill="none"/>
+<text x="70" y="88" text-anchor="middle" font-size="8" fill="#1e40af">Strong swash →</text>
+<text x="70" y="99" text-anchor="middle" font-size="8" fill="#1e40af">← Weak backwash</text>
+<text x="70" y="112" text-anchor="middle" font-size="7.5" fill="#374151">Low, long, low freq.</text>
+<!-- depositional label -->
+<rect x="16" y="26" width="60" height="14" rx="4" fill="#2563eb"/>
+<text x="46" y="35" text-anchor="middle" font-size="8" font-weight="600" fill="#fff">Depositional</text>
+<!-- destructive wave -->
+<rect x="140" y="6" width="128" height="118" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+<text x="204" y="18" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">DESTRUCTIVE</text>
+<path d="M146 80 Q156 40 172 72 Q182 90 200 45 Q218 20 268 70" stroke="#dc2626" stroke-width="2" fill="none"/>
+<text x="204" y="88" text-anchor="middle" font-size="8" fill="#991b1b">Weak swash →</text>
+<text x="204" y="99" text-anchor="middle" font-size="8" fill="#991b1b">← Strong backwash</text>
+<text x="204" y="112" text-anchor="middle" font-size="7.5" fill="#374151">Tall, short, high freq.</text>
+<!-- erosional label -->
+<rect x="150" y="26" width="55" height="14" rx="4" fill="#dc2626"/>
+<text x="177" y="35" text-anchor="middle" font-size="8" font-weight="600" fill="#fff">Erosional</text>
+</svg>`,
+
+coastlines: `<svg width="100%" viewBox="0 0 274 145" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="145" fill="#f8f9fa" rx="6"/>
+<!-- concordant -->
+<rect x="6" y="6" width="124" height="133" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1"/>
+<text x="68" y="18" text-anchor="middle" font-size="8.5" font-weight="600" fill="#0c4a6e">CONCORDANT</text>
+<text x="68" y="28" text-anchor="middle" font-size="7" fill="#0c4a6e">Bands parallel to coast</text>
+<rect x="14" y="35" width="108" height="14" rx="3" fill="#78350f" opacity="0.7"/>
+<text x="68" y="44" text-anchor="middle" font-size="7.5" fill="#fff">Hard Rock</text>
+<rect x="14" y="52" width="108" height="14" rx="3" fill="#a3a3a3" opacity="0.7"/>
+<text x="68" y="61" text-anchor="middle" font-size="7.5" fill="#fff">Soft Rock</text>
+<rect x="14" y="69" width="108" height="14" rx="3" fill="#78350f" opacity="0.7"/>
+<text x="68" y="78" text-anchor="middle" font-size="7.5" fill="#fff">Hard Rock</text>
+<line x1="14" y1="93" x2="122" y2="93" stroke="#0284c7" stroke-width="2"/>
+<text x="68" y="103" text-anchor="middle" font-size="7.5" fill="#0c4a6e">Sea (parallel)</text>
+<text x="68" y="116" text-anchor="middle" font-size="7.5" fill="#374151">One rock type exposed</text>
+<text x="68" y="128" text-anchor="middle" font-size="7" fill="#374151">e.g. Lulworth, Dorset</text>
+<!-- discordant -->
+<rect x="144" y="6" width="124" height="133" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+<text x="206" y="18" text-anchor="middle" font-size="8.5" font-weight="600" fill="#78350f">DISCORDANT</text>
+<text x="206" y="28" text-anchor="middle" font-size="7" fill="#78350f">Bands perpendicular</text>
+<rect x="152" y="35" width="30" height="56" rx="3" fill="#78350f" opacity="0.7"/>
+<rect x="188" y="35" width="24" height="56" rx="3" fill="#a3a3a3" opacity="0.7"/>
+<rect x="218" y="35" width="30" height="56" rx="3" fill="#78350f" opacity="0.7"/>
+<text x="167" y="65" text-anchor="middle" font-size="6.5" fill="#fff" transform="rotate(-90 167 65)">Hard</text>
+<text x="200" y="65" text-anchor="middle" font-size="6.5" fill="#fff" transform="rotate(-90 200 65)">Soft</text>
+<text x="233" y="65" text-anchor="middle" font-size="6.5" fill="#fff" transform="rotate(-90 233 65)">Hard</text>
+<line x1="152" y1="98" x2="248" y2="98" stroke="#d97706" stroke-width="2"/>
+<text x="206" y="108" text-anchor="middle" font-size="7.5" fill="#78350f">Bay (soft) + Headland (hard)</text>
+<text x="206" y="120" text-anchor="middle" font-size="7.5" fill="#374151">Multiple rock types</text>
+<text x="206" y="131" text-anchor="middle" font-size="7" fill="#374151">e.g. Swanage, Dorset</text>
+</svg>`,
+
+caves: `<svg width="100%" viewBox="0 0 274 115" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="115" fill="#f8f9fa" rx="6"/>
+<!-- stage labels -->
+<text x="30" y="10" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">Crack</text>
+<text x="90" y="10" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">Cave</text>
+<text x="180" y="10" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">Arch</text>
+<text x="247" y="10" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">Stack/Stump</text>
+<!-- cliff blocks - reuse same height -->
+<!-- CRACK -->
+<rect x="6" y="18" width="46" height="70" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="27" y="30" width="4" height="50" fill="#fef3c7"/>
+<text x="29" y="97" text-anchor="middle" font-size="7" fill="#374151">Hydraulic action</text>
+<text x="29" y="107" text-anchor="middle" font-size="7" fill="#374151">attacks crack</text>
+<!-- CAVE -->
+<rect x="65" y="18" width="48" height="70" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<ellipse cx="89" cy="73" rx="12" ry="10" fill="#fef3c7" stroke="#92400e" stroke-width="0.5"/>
+<text x="89" y="99" text-anchor="middle" font-size="7" fill="#374151">Cave widens</text>
+<text x="89" y="108" text-anchor="middle" font-size="7" fill="#374151">by erosion</text>
+<!-- ARCH -->
+<rect x="155" y="18" width="24" height="70" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="197" y="18" width="24" height="70" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<path d="M155 50 Q179 28 221 50 L221 18 Q179 5 155 18 Z" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<text x="179" y="99" text-anchor="middle" font-size="7" fill="#374151">Cave breaks</text>
+<text x="179" y="108" text-anchor="middle" font-size="7" fill="#374151">through headland</text>
+<!-- STACK & STUMP -->
+<rect x="229" y="30" width="16" height="58" rx="3" fill="#b45309" stroke="#92400e" stroke-width="1"/>
+<rect x="249" y="76" width="18" height="12" rx="2" fill="#92400e" stroke="#78350f" stroke-width="1"/>
+<text x="238" y="99" text-anchor="middle" font-size="7" fill="#374151">Stack</text>
+<text x="258" y="99" text-anchor="middle" font-size="7" fill="#374151">Stump</text>
+<!-- sea line -->
+<line x1="6" y1="88" x2="268" y2="88" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="274" y="91" text-anchor="end" font-size="6.5" fill="#0284c7">sea</text>
+<!-- arrows -->
+<text x="57" y="55" text-anchor="middle" font-size="10" fill="#374151">→</text>
+<text x="149" y="55" text-anchor="middle" font-size="10" fill="#374151">→</text>
+<text x="225" y="55" text-anchor="middle" font-size="10" fill="#374151">→</text>
+</svg>`,
+
+deposition: `<svg width="100%" viewBox="0 0 274 145" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="145" fill="#e0f2fe" rx="6"/>
+<!-- sea area -->
+<rect x="0" y="0" width="274" height="145" fill="#bfdbfe" rx="6"/>
+<!-- beach -->
+<path d="M0 90 L274 90 L274 145 L0 145 Z" fill="#fef3c7"/>
+<text x="137" y="122" text-anchor="middle" font-size="9" font-weight="600" fill="#92400e">BEACH</text>
+<!-- prevailing wind -->
+<text x="12" y="25" font-size="8" font-weight="600" fill="#1e40af">Prevailing wind →</text>
+<line x1="80" y1="22" x2="130" y2="22" stroke="#1e40af" stroke-width="1.5" marker-end="url(#arr)"/>
+<!-- wave 1 -->
+<path d="M20 85 L55 60" stroke="#1d4ed8" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+<text x="18" y="58" font-size="7.5" fill="#1d4ed8">Wave</text>
+<text x="14" y="67" font-size="7" fill="#1d4ed8">angle 45°</text>
+<!-- swash arrow up beach at angle -->
+<line x1="55" y1="85" x2="95" y2="92" stroke="#ea580c" stroke-width="2" marker-end="url(#arr)"/>
+<text x="62" y="80" font-size="7.5" fill="#ea580c" font-weight="600">Swash</text>
+<!-- backwash straight back -->
+<line x1="95" y1="92" x2="75" y2="88" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+<text x="74" y="110" font-size="7.5" fill="#7c3aed" font-weight="600">Backwash</text>
+<text x="74" y="120" font-size="7" fill="#7c3aed">(gravity, perpendicular)</text>
+<!-- pebble path -->
+<path d="M30 87 L60 90 L90 93 L115 93 L140 93" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="3 2" fill="none" marker-end="url(#arr)"/>
+<text x="155" y="96" font-size="7.5" fill="#ea580c" font-weight="600">Net movement of sediment →</text>
+<!-- groyne blocking -->
+<rect x="200" y="84" width="5" height="61" fill="#374151" rx="1"/>
+<text x="207" y="95" font-size="7" fill="#374151">Groyne</text>
+<text x="207" y="104" font-size="7" fill="#374151">traps</text>
+<text x="207" y="113" font-size="7" fill="#374151">sediment</text>
+<!-- marker def -->
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+</svg>`,
+
+hydrograph: `<svg width="100%" viewBox="0 0 274 160" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="274" height="160" fill="#f8f9fa" rx="6"/>
+<!-- axes -->
+<line x1="38" y1="10" x2="38" y2="130" stroke="#374151" stroke-width="1.5" marker-end="url(#a2)"/>
+<line x1="38" y1="130" x2="268" y2="130" stroke="#374151" stroke-width="1.5" marker-end="url(#a2)"/>
+<text x="0" y="72" font-size="7.5" fill="#374151" writing-mode="tb" transform="rotate(-90 12 72)">Discharge (m³/s)</text>
+<text x="153" y="142" text-anchor="middle" font-size="7.5" fill="#374151">Time (hours)</text>
+<!-- rainfall bars -->
+<rect x="55" y="110" width="8" height="20" fill="#94a3b8" opacity="0.7"/>
+<rect x="67" y="98" width="8" height="32" fill="#94a3b8" opacity="0.7"/>
+<rect x="79" y="104" width="8" height="26" fill="#94a3b8" opacity="0.7"/>
+<rect x="91" y="116" width="8" height="14" fill="#94a3b8" opacity="0.7"/>
+<text x="75" y="95" text-anchor="middle" font-size="7" fill="#64748b">Rainfall peak</text>
+<!-- flashy curve (red) -->
+<path d="M44 125 Q65 122 82 50 Q90 25 108 45 Q130 70 155 100 Q180 118 240 125" stroke="#dc2626" stroke-width="2" fill="none"/>
+<!-- subdued curve (blue) -->
+<path d="M44 125 Q80 123 110 100 Q130 80 150 72 Q170 65 190 80 Q220 100 240 125" stroke="#2563eb" stroke-width="2" fill="none"/>
+<!-- labels -->
+<text x="100" y="35" font-size="7.5" fill="#dc2626" font-weight="600">Flashy (short lag)</text>
+<text x="164" y="65" font-size="7.5" fill="#2563eb" font-weight="600">Subdued (long lag)</text>
+<!-- peak discharge markers -->
+<line x1="108" y1="45" x2="108" y2="128" stroke="#dc2626" stroke-width="0.8" stroke-dasharray="3 2"/>
+<line x1="152" y1="72" x2="152" y2="128" stroke="#2563eb" stroke-width="0.8" stroke-dasharray="3 2"/>
+<!-- lag time arrows -->
+<line x1="79" y1="148" x2="79" y2="140" stroke="#374151" stroke-width="1"/>
+<line x1="108" y1="148" x2="108" y2="140" stroke="#dc2626" stroke-width="1"/>
+<line x1="79" y1="147" x2="108" y2="147" stroke="#374151" stroke-width="1"/>
+<text x="93" y="157" text-anchor="middle" font-size="7" fill="#374151">Lag time</text>
+<!-- base flow -->
+<text x="248" y="128" text-anchor="start" font-size="7" fill="#64748b">Base</text>
+<text x="248" y="136" text-anchor="start" font-size="7" fill="#64748b">flow</text>
+</svg>`,
+
+waterfalls: `<svg width="100%" viewBox="0 0 274 145" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="145" fill="#f8f9fa" rx="6"/>
+<!-- stage 1 -->
+<text x="35" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">1. Initial</text>
+<rect x="10" y="12" width="20" height="75" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<text x="20" y="26" text-anchor="middle" font-size="6" fill="#fff" transform="rotate(-90 20 26)" >Hard</text>
+<rect x="30" y="30" width="16" height="57" rx="2" fill="#c9b99a" stroke="#92400e" stroke-width="0.8"/>
+<text x="38" y="60" text-anchor="middle" font-size="6" fill="#5a3e1b">Soft</text>
+<rect x="46" y="12" width="20" height="75" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<path d="M15 12 Q20 15 25 12" stroke="#0284c7" stroke-width="1.5" fill="#bfdbfe"/>
+<line x1="20" y1="12" x2="20" y2="87" stroke="#0284c7" stroke-width="1.5"/>
+<line x1="10" y1="87" x2="66" y2="87" stroke="#6b7280" stroke-width="2"/>
+<!-- stage 2 -->
+<text x="120" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">2. Undercutting</text>
+<rect x="95" y="12" width="20" height="75" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="115" y="30" width="8" height="57" rx="2" fill="#c9b99a" stroke="#92400e" stroke-width="0.8"/>
+<rect x="123" y="12" width="20" height="30" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<text x="133" y="30" text-anchor="middle" font-size="6.5" fill="#fff">over</text>
+<text x="133" y="39" text-anchor="middle" font-size="6.5" fill="#fff">hang</text>
+<ellipse cx="127" cy="75" rx="10" ry="7" fill="#bfdbfe" stroke="#0284c7" stroke-width="0.8"/>
+<text x="127" y="76" text-anchor="middle" font-size="6" fill="#1d4ed8">plunge</text>
+<text x="127" y="83" text-anchor="middle" font-size="6" fill="#1d4ed8">pool</text>
+<line x1="100" y1="12" x2="100" y2="55" stroke="#0284c7" stroke-width="1.5"/>
+<path d="M100 55 Q108 68 120 72" stroke="#0284c7" stroke-width="1.5" fill="none"/>
+<line x1="95" y1="87" x2="143" y2="87" stroke="#6b7280" stroke-width="2"/>
+<!-- stage 3 + gorge -->
+<text x="210" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">3. Retreat + Gorge</text>
+<rect x="185" y="12" width="18" height="75" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="203" y="12" width="16" height="75" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<path d="M193 12 Q196 14 200 12" stroke="#0284c7" stroke-width="1.5" fill="#bfdbfe"/>
+<line x1="196" y1="12" x2="196" y2="45" stroke="#0284c7" stroke-width="1.5"/>
+<!-- gorge walls -->
+<rect x="220" y="30" width="12" height="57" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="248" y="30" width="12" height="57" rx="2" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<line x1="232" y1="87" x2="248" y2="87" stroke="#0284c7" stroke-width="1.5"/>
+<text x="240" y="55" text-anchor="middle" font-size="6.5" fill="#0284c7">gorge</text>
+<line x1="185" y1="87" x2="260" y2="87" stroke="#6b7280" stroke-width="2"/>
+<text x="240" y="98" text-anchor="middle" font-size="6.5" fill="#374151">← waterfall retreats upstream</text>
+<!-- arrows between stages -->
+<text x="82" y="52" text-anchor="middle" font-size="11" fill="#374151">→</text>
+<text x="165" y="52" text-anchor="middle" font-size="11" fill="#374151">→</text>
+<text x="137" y="120" text-anchor="middle" font-size="7.5" fill="#374151">Hard over soft → soft undercut → overhang collapses → gorge left behind</text>
+</svg>`,
+
+oxbow: `<svg width="100%" viewBox="0 0 274 120" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect x="0" y="0" width="274" height="120" fill="#f8f9fa" rx="6"/>
+<!-- stage labels -->
+<text x="35" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">1. Meander</text>
+<text x="120" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">2. Neck narrows</text>
+<text x="210" y="9" text-anchor="middle" font-size="7.5" font-weight="600" fill="#374151">3. Oxbow lake</text>
+<!-- stage 1: meander -->
+<path d="M8 45 Q14 20 35 20 Q56 20 62 45 Q68 70 35 70 Q12 70 8 45" stroke="#2563eb" stroke-width="5" fill="none"/>
+<line x1="8" y1="45" x2="8" y2="60" stroke="#2563eb" stroke-width="5"/>
+<line x1="62" y1="45" x2="62" y2="60" stroke="#2563eb" stroke-width="5"/>
+<text x="35" y="50" text-anchor="middle" font-size="7" fill="#1e40af">erosion</text>
+<text x="35" y="59" text-anchor="middle" font-size="7" fill="#1e40af">on outside</text>
+<text x="8" y="82" font-size="6.5" fill="#dc2626">←erosion</text>
+<text x="30" y="82" font-size="6.5" fill="#059669">deposit→</text>
+<!-- stage 2: neck narrowing -->
+<path d="M90 40 Q97 18 118 18 Q139 18 146 40 Q153 60 118 65 Q95 65 90 50" stroke="#2563eb" stroke-width="5" fill="none"/>
+<line x1="90" y1="40" x2="90" y2="55" stroke="#2563eb" stroke-width="5"/>
+<line x1="146" y1="40" x2="146" y2="55" stroke="#2563eb" stroke-width="5"/>
+<!-- neck lines -->
+<line x1="105" y1="42" x2="131" y2="42" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="118" y="36" text-anchor="middle" font-size="6.5" fill="#dc2626">narrow neck</text>
+<text x="118" y="82" text-anchor="middle" font-size="6.5" fill="#374151">floods cut neck</text>
+<!-- stage 3: oxbow -->
+<ellipse cx="210" cy="44" rx="30" ry="20" stroke="#7c3aed" stroke-width="2.5" fill="#ede9fe"/>
+<text x="210" y="41" text-anchor="middle" font-size="7.5" fill="#4c1d95" font-weight="600">Oxbow</text>
+<text x="210" y="51" text-anchor="middle" font-size="7.5" fill="#4c1d95">Lake</text>
+<line x1="240" y1="44" x2="255" y2="44" stroke="#6b7280" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="175" y1="44" x2="180" y2="55" stroke="#2563eb" stroke-width="4"/>
+<line x1="240" y1="44" x2="245" y2="55" stroke="#2563eb" stroke-width="4"/>
+<path d="M180 55 L245 55" stroke="#2563eb" stroke-width="4"/>
+<text x="212" y="72" text-anchor="middle" font-size="6.5" fill="#374151">Deposition seals both ends</text>
+<!-- arrows -->
+<text x="75" y="50" text-anchor="middle" font-size="11" fill="#374151">→</text>
+<text x="162" y="50" text-anchor="middle" font-size="11" fill="#374151">→</text>
+</svg>`,
+
+drainage: `<svg width="100%" viewBox="0 0 274 150" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect x="0" y="0" width="274" height="150" fill="#d1fae5" rx="6"/>
+<!-- watershed outline (hills) -->
+<path d="M10 80 Q20 20 50 25 Q80 30 90 60 Q100 80 120 70 Q140 60 155 80 Q165 100 185 85 Q210 65 235 75 Q255 90 264 80" stroke="#065f46" stroke-width="1.5" stroke-dasharray="5 3" fill="none"/>
+<text x="137" y="16" text-anchor="middle" font-size="7.5" font-weight="600" fill="#065f46">Watershed (boundary)</text>
+<line x1="100" y1="18" x2="60" y2="30" stroke="#065f46" stroke-width="0.8"/>
+<!-- tributaries -->
+<path d="M40 50 Q55 65 70 80" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a4)"/>
+<path d="M80 40 Q82 60 85 80" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a4)"/>
+<path d="M165 60 Q155 70 145 85" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a4)"/>
+<path d="M195 55 Q185 68 175 82" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a4)"/>
+<!-- main channel -->
+<path d="M85 80 Q105 90 137 95 Q165 100 175 85 Q180 80 190 88 Q210 100 240 110" stroke="#1d4ed8" stroke-width="4" fill="none" marker-end="url(#a4)"/>
+<!-- source label -->
+<circle cx="40" cy="46" r="4" fill="#059669"/>
+<text x="30" y="38" font-size="7" fill="#065f46" font-weight="600">Source</text>
+<!-- confluence -->
+<circle cx="137" cy="95" r="4" fill="#d97706"/>
+<text x="138" y="108" text-anchor="middle" font-size="6.5" fill="#78350f">Confluence</text>
+<!-- mouth -->
+<circle cx="240" cy="110" r="4" fill="#dc2626"/>
+<text x="252" y="113" font-size="7" fill="#991b1b" font-weight="600">Mouth</text>
+<!-- tributary labels -->
+<text x="36" y="68" font-size="7" fill="#1d4ed8">Tributary</text>
+<text x="155" y="68" font-size="7" fill="#1d4ed8">Tributary</text>
+<!-- drainage area label -->
+<text x="137" y="136" text-anchor="middle" font-size="7.5" fill="#065f46" font-weight="600">Drainage Basin (catchment area)</text>
+<text x="137" y="147" text-anchor="middle" font-size="7" fill="#374151">All land drained by the river + tributaries</text>
+</svg>`,
+
+courses: `<svg width="100%" viewBox="0 0 274 140" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect x="0" y="0" width="274" height="140" fill="#f8f9fa" rx="6"/>
+<!-- Upper course box -->
+<rect x="4" y="4" width="80" height="132" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="44" y="17" text-anchor="middle" font-size="8" font-weight="600" fill="#78350f">UPPER</text>
+<!-- V valley cross-section -->
+<path d="M20 70 L44 45 L68 70" stroke="#92400e" stroke-width="2" fill="#d4b483"/>
+<path d="M20 70 L44 56 L68 70" stroke="#2563eb" stroke-width="2.5" fill="none"/>
+<text x="44" y="85" text-anchor="middle" font-size="7" fill="#374151">V-shaped valley</text>
+<text x="44" y="94" text-anchor="middle" font-size="7" fill="#374151">Steep sides</text>
+<text x="44" y="103" text-anchor="middle" font-size="7" fill="#78350f">↕ Vertical erosion</text>
+<text x="44" y="114" text-anchor="middle" font-size="7" fill="#374151">Interlocking</text>
+<text x="44" y="123" text-anchor="middle" font-size="7" fill="#374151">spurs, waterfalls</text>
+<text x="44" y="133" text-anchor="middle" font-size="6.5" fill="#374151">Angular boulders</text>
+<!-- Middle course box -->
+<rect x="97" y="4" width="80" height="132" rx="5" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+<text x="137" y="17" text-anchor="middle" font-size="8" font-weight="600" fill="#065f46">MIDDLE</text>
+<!-- U/flat valley -->
+<path d="M105 65 L110 80 L164 80 L169 65" stroke="#059669" stroke-width="1.5" fill="#a3e4b4"/>
+<path d="M125 80 Q137 75 149 80" stroke="#2563eb" stroke-width="3" fill="none"/>
+<text x="137" y="95" text-anchor="middle" font-size="7" fill="#374151">Wider valley</text>
+<text x="137" y="104" text-anchor="middle" font-size="7" fill="#374151">Meanders form</text>
+<text x="137" y="113" text-anchor="middle" font-size="6.5" fill="#dc2626">River cliff (outside)</text>
+<text x="137" y="122" text-anchor="middle" font-size="6.5" fill="#059669">Point bar (inside)</text>
+<text x="137" y="132" text-anchor="middle" font-size="6.5" fill="#374151">↔ Lateral erosion</text>
+<!-- Lower course box -->
+<rect x="190" y="4" width="80" height="132" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="230" y="17" text-anchor="middle" font-size="8" font-weight="600" fill="#4c1d95">LOWER</text>
+<!-- flat floodplain -->
+<rect x="198" y="60" width="64" height="22" fill="#c4b5fd" rx="2"/>
+<path d="M210 71 Q225 68 240 71 Q255 74 268 70" stroke="#2563eb" stroke-width="4" fill="none"/>
+<rect x="205" y="62" width="8" height="18" fill="#e9d5ff" rx="1" opacity="0.8"/>
+<rect x="255" y="62" width="8" height="18" fill="#e9d5ff" rx="1" opacity="0.8"/>
+<text x="209" y="57" text-anchor="middle" font-size="6" fill="#374151">Levée</text>
+<text x="259" y="57" text-anchor="middle" font-size="6" fill="#374151">Levée</text>
+<text x="230" y="96" text-anchor="middle" font-size="7" fill="#374151">Wide floodplain</text>
+<text x="230" y="105" text-anchor="middle" font-size="7" fill="#374151">Large meanders</text>
+<text x="230" y="114" text-anchor="middle" font-size="7" fill="#374151">Oxbow lakes, deltas</text>
+<text x="230" y="123" text-anchor="middle" font-size="7" fill="#4c1d95">↕↔ Deposition</text>
+<text x="230" y="133" text-anchor="middle" font-size="6.5" fill="#374151">Rounded fine silt</text>
+</svg>`,
+
+cstmgmt: `<svg width="100%" viewBox="0 0 274 150" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="150" fill="#f8f9fa" rx="6"/>
+<text x="137" y="11" text-anchor="middle" font-size="8.5" font-weight="600" fill="#374151">Hard Engineering vs Soft Engineering</text>
+<!-- sea -->
+<rect x="0" y="18" width="274" height="35" fill="#bfdbfe" rx="0"/>
+<text x="137" y="38" text-anchor="middle" font-size="7.5" fill="#1d4ed8">SEA →</text>
+<!-- land -->
+<rect x="0" y="53" width="274" height="97" fill="#d4b483" rx="0"/>
+<!-- SEA WALL -->
+<rect x="8" y="46" width="10" height="40" rx="2" fill="#374151"/>
+<path d="M8 46 Q13 40 18 46" fill="#374151"/>
+<text x="13" y="96" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Sea</text>
+<text x="13" y="104" text-anchor="middle" font-size="6.5" fill="#374151">wall</text>
+<text x="13" y="114" text-anchor="middle" font-size="6" fill="#059669">✓ Very effective</text>
+<text x="13" y="123" text-anchor="middle" font-size="6" fill="#dc2626">✗ Very costly</text>
+<!-- GROYNES -->
+<rect x="60" y="30" width="6" height="40" rx="1" fill="#78350f"/>
+<rect x="85" y="30" width="6" height="40" rx="1" fill="#78350f"/>
+<!-- sediment piling up -->
+<ellipse cx="75" cy="52" rx="10" ry="5" fill="#fef3c7" opacity="0.7"/>
+<text x="75" y="96" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Groynes</text>
+<text x="75" y="104" text-anchor="middle" font-size="6" fill="#059669">✓ Builds beach</text>
+<text x="75" y="113" text-anchor="middle" font-size="6" fill="#dc2626">✗ Starves downdrift</text>
+<!-- ROCK ARMOUR -->
+<circle cx="130" cy="52" r="6" fill="#6b7280"/>
+<circle cx="140" cy="50" r="5" fill="#9ca3af"/>
+<circle cx="135" cy="45" r="4" fill="#6b7280"/>
+<text x="135" y="96" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Rock armour</text>
+<text x="135" y="104" text-anchor="middle" font-size="6" fill="#059669">✓ Cheap, effective</text>
+<text x="135" y="113" text-anchor="middle" font-size="6" fill="#dc2626">✗ Ugly</text>
+<!-- BEACH NOURISHMENT (soft) -->
+<path d="M170 53 Q185 48 200 53 L200 60 L170 60 Z" fill="#fde68a"/>
+<text x="185" y="96" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Beach nourishment</text>
+<text x="185" y="104" text-anchor="middle" font-size="6" fill="#059669">✓ Natural look</text>
+<text x="185" y="113" text-anchor="middle" font-size="6" fill="#dc2626">✗ Needs repeating</text>
+<!-- MANAGED RETREAT (soft) -->
+<path d="M230 53 Q245 50 265 55 L265 62 Q245 60 230 62 Z" fill="#bbf7d0"/>
+<text x="247" y="96" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Managed retreat</text>
+<text x="247" y="104" text-anchor="middle" font-size="6" fill="#059669">✓ Eco-friendly, cheap</text>
+<text x="247" y="113" text-anchor="middle" font-size="6" fill="#dc2626">✗ People relocated</text>
+<!-- divider -->
+<line x1="162" y1="20" x2="162" y2="148" stroke="#374151" stroke-width="1" stroke-dasharray="4 2"/>
+<text x="80" y="140" text-anchor="middle" font-size="7" font-weight="600" fill="#991b1b">HARD ENGINEERING</text>
+<text x="215" y="140" text-anchor="middle" font-size="7" font-weight="600" fill="#065f46">SOFT ENGINEERING</text>
+</svg>`,
+
+weathering: `<svg width="100%" viewBox="0 0 274 130" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="130" fill="#f8f9fa" rx="6"/>
+<text x="137" y="10" text-anchor="middle" font-size="8.5" font-weight="600" fill="#374151">Freeze-Thaw Weathering</text>
+<!-- 4 stages -->
+<!-- Stage 1: water in crack -->
+<rect x="6" y="18" width="58" height="75" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="30" y="20" width="6" height="35" fill="#bfdbfe" stroke="#0284c7" stroke-width="0.5"/>
+<text x="35" y="18" text-anchor="middle" font-size="7" fill="#374151" font-weight="600">1</text>
+<text x="35" y="104" text-anchor="middle" font-size="6.5" fill="#374151">Water fills</text>
+<text x="35" y="112" text-anchor="middle" font-size="6.5" fill="#374151">crack (rain/melt)</text>
+<!-- Stage 2: freezing -->
+<rect x="74" y="18" width="58" height="75" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="98" y="18" width="8" height="38" fill="#e0f2fe" stroke="#0284c7" stroke-width="0.8"/>
+<text x="103" y="22" text-anchor="middle" font-size="6" fill="#0c4a6e">ice</text>
+<!-- expansion arrows -->
+<line x1="94" y1="30" x2="88" y2="30" stroke="#dc2626" stroke-width="1.5"/>
+<line x1="112" y1="30" x2="118" y2="30" stroke="#dc2626" stroke-width="1.5"/>
+<text x="103" y="104" text-anchor="middle" font-size="6.5" fill="#374151">Freezes → expands</text>
+<text x="103" y="112" text-anchor="middle" font-size="6.5" fill="#374151">~9-10%</text>
+<!-- Stage 3: crack widens -->
+<rect x="142" y="18" width="28" height="75" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<rect x="160" y="18" width="4" height="75" fill="none"/>
+<rect x="172" y="18" width="28" height="75" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<path d="M160 18 Q163 40 162 60 Q161 70 160 75" stroke="#92400e" stroke-width="1.5" fill="none" stroke-dasharray="2 1"/>
+<text x="171" y="104" text-anchor="middle" font-size="6.5" fill="#374151">Crack widens</text>
+<text x="171" y="112" text-anchor="middle" font-size="6.5" fill="#374151">over time</text>
+<!-- Stage 4: rock shatters -->
+<rect x="210" y="18" width="58" height="75" rx="3" fill="#d4b483" stroke="#92400e" stroke-width="1"/>
+<path d="M230 18 L235 55 L225 75" stroke="#92400e" stroke-width="1.5" fill="none"/>
+<path d="M245 18 L242 45 L250 70" stroke="#92400e" stroke-width="1.5" fill="none"/>
+<circle cx="228" cy="78" r="4" fill="#b45309" stroke="#78350f" stroke-width="0.8"/>
+<circle cx="238" cy="80" r="3" fill="#b45309"/>
+<circle cx="246" cy="76" r="4" fill="#92400e"/>
+<text x="239" y="104" text-anchor="middle" font-size="6.5" fill="#374151">Fragments</text>
+<text x="239" y="112" text-anchor="middle" font-size="6.5" fill="#374151">break off (scree)</text>
+<text x="239" y="120" text-anchor="middle" font-size="6" fill="#374151">→ Mass movement</text>
+<!-- arrows -->
+<text x="68" y="58" text-anchor="middle" font-size="10" fill="#374151">→</text>
+<text x="137" y="58" text-anchor="middle" font-size="10" fill="#374151">→</text>
+<text x="204" y="58" text-anchor="middle" font-size="10" fill="#374151">→</text>
+</svg>`,
+
+burgess: `<svg width="100%" viewBox="0 0 274 150" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="274" height="150" fill="#f8f9fa" rx="6"/>
+<!-- Zones as concentric circles -->
+<circle cx="137" cy="75" r="120" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+<circle cx="137" cy="75" r="96" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+<circle cx="137" cy="75" r="72" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+<circle cx="137" cy="75" r="48" fill="#86efac" stroke="#059669" stroke-width="1"/>
+<circle cx="137" cy="75" r="24" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+<!-- labels inside -->
+<text x="137" y="72" text-anchor="middle" font-size="7" font-weight="600" fill="#1e40af">CBD</text>
+<text x="137" y="80" text-anchor="middle" font-size="6" fill="#1e40af">shops/offices</text>
+<!-- zone 2 label -->
+<text x="137" y="120" text-anchor="middle" font-size="6.5" fill="#991b1b" transform="rotate(-45 137 120)">Zone of Transition</text>
+<!-- arrows + labels on right side -->
+<line x1="160" y1="75" x2="195" y2="50" stroke="#374151" stroke-width="0.8"/>
+<text x="197" y="42" font-size="6.5" fill="#374151" font-weight="600">Zone 2: Transition</text>
+<text x="197" y="51" font-size="6" fill="#374151">Old housing, industry</text>
+<line x1="182" y1="75" x2="195" y2="75" stroke="#374151" stroke-width="0.8"/>
+<text x="197" y="73" font-size="6.5" fill="#374151" font-weight="600">Zone 3: Inner suburbs</text>
+<text x="197" y="82" font-size="6" fill="#374151">Victorian terraces</text>
+<line x1="220" y1="75" x2="230" y2="100" stroke="#374151" stroke-width="0.8"/>
+<text x="197" y="104" font-size="6.5" fill="#374151" font-weight="600">Zone 4: Outer suburbs</text>
+<text x="197" y="113" font-size="6" fill="#374151">Semi-detached, gardens</text>
+<line x1="253" y1="75" x2="265" y2="125" stroke="#374151" stroke-width="0.8"/>
+<text x="197" y="128" font-size="6.5" fill="#374151" font-weight="600">Zone 5: Rural-urban fringe</text>
+<text x="197" y="137" font-size="6" fill="#374151">Retail parks, green belt</text>
+<!-- N marker -->
+<text x="12" y="14" font-size="8" font-weight="600" fill="#374151">Burgess Model (1925)</text>
+</svg>`,
+
+sanddunes: `<svg width="100%" viewBox="0 0 274 130" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<rect x="0" y="0" width="274" height="130" fill="#e0f2fe" rx="6"/>
+<!-- sea -->
+<rect x="0" y="0" width="40" height="130" fill="#bfdbfe" rx="6" rx="0"/>
+<text x="20" y="70" text-anchor="middle" font-size="7" fill="#1d4ed8" transform="rotate(-90 20 70)">SEA</text>
+<!-- ground level -->
+<path d="M40 95 Q70 88 100 80 Q130 70 155 72 Q175 70 200 68 Q225 65 274 63" stroke="#78350f" stroke-width="1.5" fill="#fef3c7"/>
+<!-- dune profiles -->
+<!-- embryo -->
+<ellipse cx="58" cy="88" rx="14" ry="8" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+<text x="58" y="108" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Embryo</text>
+<text x="58" y="117" text-anchor="middle" font-size="6" fill="#374151">Pioneer</text>
+<text x="58" y="125" text-anchor="middle" font-size="6" fill="#374151">plants</text>
+<!-- yellow dune -->
+<ellipse cx="95" cy="76" rx="18" ry="14" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+<text x="95" y="97" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Yellow</text>
+<text x="95" y="106" text-anchor="middle" font-size="6" fill="#374151">Marram</text>
+<text x="95" y="115" text-anchor="middle" font-size="6" fill="#374151">grass</text>
+<!-- grey dune -->
+<ellipse cx="135" cy="68" rx="18" ry="16" fill="#a3a3a3" stroke="#6b7280" stroke-width="1"/>
+<text x="135" y="92" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Grey</text>
+<text x="135" y="101" text-anchor="middle" font-size="6" fill="#374151">Humus</text>
+<text x="135" y="110" text-anchor="middle" font-size="6" fill="#374151">builds</text>
+<!-- dune slack -->
+<path d="M155 72 Q165 80 175 72" stroke="#6b7280" stroke-width="1.2" fill="#bfdbfe"/>
+<text x="165" y="95" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Slack</text>
+<text x="165" y="104" text-anchor="middle" font-size="6" fill="#374151">Water table</text>
+<!-- mature -->
+<ellipse cx="215" cy="64" rx="22" ry="20" fill="#4d7c0f" stroke="#3f6212" stroke-width="1"/>
+<text x="215" y="85" text-anchor="middle" font-size="6.5" fill="#374151" font-weight="600">Mature</text>
+<text x="215" y="94" text-anchor="middle" font-size="6" fill="#374151">Woodland</text>
+<text x="215" y="103" text-anchor="middle" font-size="6" fill="#374151">forming</text>
+<!-- wind arrow -->
+<line x1="5" y1="30" x2="65" y2="30" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#a6)"/>
+<text x="35" y="25" text-anchor="middle" font-size="7" fill="#1d4ed8">Wind</text>
+<!-- biodiversity arrow -->
+<line x1="42" y1="15" x2="256" y2="15" stroke="#059669" stroke-width="1.5" marker-end="url(#a6)"/>
+<text x="149" y="11" text-anchor="middle" font-size="7" fill="#059669" font-weight="600">Biodiversity increases →</text>
+</svg>`,
+
+};
 
 // ── STATE ────────────────────────────────────────────────────────────────
 let mode = 'learn';          // 'learn' | 'revise'
@@ -853,7 +1334,8 @@ function renderLearnPanel(inner,c,sc){
     <button class="d-close" onclick="closePanel()">✕</button>
     <div class="d-badge" style="background:${sc.f};color:${sc.t}">${c.badge}</div>
     <h2 class="d-title">${c.title}</h2>
-    <div class="d-def">${c.def||''}</div>
+    ${c.def?`<div class="d-def">${c.def}</div>`:''}
+    ${DIAGRAMS[selectedId]?`<div style="margin:4px 0 2px">${DIAGRAMS[selectedId]}</div>`:''}
     <div>
       <div class="d-section-label" style="margin-bottom:6px">Key facts</div>
       <div class="d-facts-box" style="--dot-col:${sc.s}">
@@ -879,6 +1361,7 @@ function renderRevisePanel(inner,c,sc){
     <button class="d-close" onclick="closePanel()">✕</button>
     <div class="d-badge" style="background:${sc.f};color:${sc.t}">${c.badge}</div>
     <h2 class="d-title">${c.title}</h2>
+    ${DIAGRAMS[selectedId]?`<div style="margin:2px 0">${DIAGRAMS[selectedId]}</div>`:''}
     <div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
         <div class="d-section-label">Key facts — click each to reveal</div>
