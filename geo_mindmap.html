@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AQA GCSE Geography</title>
+<title>Edexcel GCSE Geography</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -203,8 +203,8 @@ body{font-family:"DM Sans",sans-serif;background:#f5f3ef;color:#1a1a1a;height:10
 <!-- WELCOME OVERLAY -->
 <div id="welcome">
   <div id="welcome-box">
-    <h1>AQA GCSE Geography</h1>
-    <div class="sub">Interactive revision tool — 44 topics, diagrams, exam questions</div>
+    <h1>Edexcel GCSE Geography</h1>
+    <div class="sub">Interactive revision tool — 44 topics, diagrams, Edexcel exam questions</div>
     <div class="how-list">
       <div class="how-item">
         <div class="how-num" style="background:#dbeafe;color:#1e40af">1</div>
@@ -212,7 +212,7 @@ body{font-family:"DM Sans",sans-serif;background:#f5f3ef;color:#1a1a1a;height:10
       </div>
       <div class="how-item">
         <div class="how-num" style="background:#d1fae5;color:#065f46">2</div>
-        <div class="how-text"><strong>Choose your mode (top bar)</strong><span>📖 <b>Learn</b> — read notes freely, use ← → arrows to go topic by topic, mark as read.<br>✏️ <b>Revise</b> — facts are hidden; tap to reveal each one, rate your confidence, get an AQA exam question.</span></div>
+        <div class="how-text"><strong>Choose your mode (top bar)</strong><span>📖 <b>Learn</b> — read notes freely, use ← → arrows to go topic by topic, mark as read.<br>✏️ <b>Revise</b> — facts are hidden; tap to reveal each one, rate your confidence, get an Edexcel exam question.</span></div>
       </div>
       <div class="how-item">
         <div class="how-num" style="background:#ede9fe;color:#4c1d95">3</div>
@@ -230,7 +230,7 @@ body{font-family:"DM Sans",sans-serif;background:#f5f3ef;color:#1a1a1a;height:10
 <div id="app" style="display:flex;flex-direction:column;height:100vh">
 
   <div id="topbar">
-    <h1>AQA GCSE Geography <span>Revision</span></h1>
+    <h1>Edexcel GCSE Geography <span>Revision</span></h1>
     <div id="mode-toggle">
       <button class="mode-btn active-learn" id="btn-learn" onclick="setMode('learn')">📖 Learn</button>
       <button class="mode-btn" id="btn-revise" onclick="setMode('revise')">✏️ Revise</button>
@@ -274,7 +274,7 @@ body{font-family:"DM Sans",sans-serif;background:#f5f3ef;color:#1a1a1a;height:10
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>
 const NODES = [
-  {id:'center',     label:'AQA GCSE\nGeography', level:0, sec:'center'},
+  {id:'center',     label:'Edexcel GCSE\nGeography', level:0, sec:'center'},
   // Sections
   {id:'coasts',     label:'Coasts',              level:1, sec:'coasts'},
   {id:'economic',   label:'Economic\nActivity',  level:1, sec:'economic'},
@@ -371,14 +371,14 @@ const LINKS = [
 
 
 const CONTENT = {
-  center:{title:'AQA GCSE Geography',badge:'Overview',sec:'center',
-    def:'AQA GCSE Geography covers three main areas: Physical Environments, Human Environments, and Geographical Skills & Fieldwork.',
-    facts:['Paper 1: Living with the Physical Environment','Paper 2: Challenges in the Human Environment','Paper 3: Geographical Applications (inc. fieldwork)','Assessed via written exams — no coursework component','Always support points with specific place-name examples','Use data/statistics wherever possible in 6-mark answers'],
-    tip:'Structure longer answers: Point → Evidence → Explain → Evaluate (PEEL)'},
+  center:{title:'Edexcel GCSE Geography',badge:'Overview',sec:'center',
+    def:'Edexcel GCSE Geography covers three main areas: Physical Environments, Human Environments, and Geographical Skills & Fieldwork.',
+    facts:['Paper 1: The Physical Environment (coasts, rivers, weather, ecosystems) — 1hr 30min','Paper 2: The Human Environment (urban issues, development, resource management) — 1hr 30min','Paper 3: Geographical Investigations (fieldwork + UK challenges) — 1hr 30min','Command words: Describe, Explain, Assess, Evaluate — know the difference','8-mark answers: two developed points with evidence; 12-mark: needs a conclusion','Always use named examples with supporting data'],
+    tip:'Edexcel 8-mark Assess questions: two contrasting points + evidence + judgement. 12-mark: add a reasoned conclusion.'},
 
   // ── SECTIONS ──
   coasts:{title:'Coasts',badge:'Section 1',sec:'coasts',
-    def:'The study of coastal processes — erosion, transportation, deposition — and the landforms they create, along with rising sea levels and coastal management strategies.',
+    def:'Edexcel Paper 1: Coastal change and conflict — processes, landforms, management, and a named UK coastal location (e.g. Holderness or Dorset).',
     facts:['Erosion types: Hydraulic action, Corrasion, Abrasion, Attrition, Solution','Transportation: Longshore Drift moves sediment along the coast','Deposition creates beaches, spits, bars, tombolos','Hard vs. soft engineering are the two management approaches','Case study: Holderness — fastest eroding coast in Europe (2 m/year)','Coral reefs and mangroves are key coastal ecosystems'],
     tip:'Mnemonic for erosion: HCAAS — Hydraulic, Corrasion, Abrasion, Attrition, Solution',
     related:['erosion','coastlines','cstmgmt','holderness','mangroves','coral']},
@@ -389,7 +389,7 @@ const CONTENT = {
     tip:'Structure sector evolution: Pre-industrial → Industrial → Post-industrial → Knowledge economy'},
 
   rivers:{title:'Rivers',badge:'Section 3',sec:'rivers',
-    def:'Covers the hydrological cycle, river processes, landform formation, flood management, and physical fieldwork techniques.',
+    def:'Edexcel Paper 1: River processes and pressures — drainage basin, processes, landforms, flooding and flood management strategies.',
     facts:['Closed system: water moves between land, sea and atmosphere','Erosion: Hydraulic action, Abrasion, Attrition, Solution','Transport: Traction, Saltation, Suspension, Solution (TSSS)','Discharge = Cross-sectional area × velocity (m³/s)','Upper course = vertical erosion; Lower course = deposition','Storm hydrographs show flood risk through lag time'],
     tip:'River transport mnemonic: TSSS — Traction, Saltation, Suspension, Solution'},
 
@@ -502,7 +502,7 @@ const CONTENT = {
   globalise:{title:'Globalisation',badge:'Economic',sec:'economic',
     def:'The increasing interconnection of the world\'s economies, cultures and populations through trade, investment, technology, migration and communications.',
     facts:['Drivers: containerisation, ICT revolution, WTO free trade, TNCs, financial deregulation','TNCs operate in multiple countries — exploit cheaper labour and resources globally','World trade has grown 15× since 1950 due to globalisation','Winners: TNCs (profits), consumers (cheaper goods), host countries (FDI, jobs)','Losers: local industries (undercut), workers in LICs (poor conditions), environment','Unequal distribution of benefits — HIC companies gain most; LIC workers often exploited'],
-    tip:'Always evaluate both winners and losers of globalisation — AQA likes a balanced assessment',
+    tip:'Always evaluate both winners and losers of globalisation — Edexcel likes a balanced assessment',
     related:['china','sectors','informal','energy']},
 
   china:{title:'China Case Study',badge:'Economic',sec:'economic',
@@ -514,7 +514,7 @@ const CONTENT = {
   threegorges:{title:'Three Gorges Dam',badge:'Economic',sec:'economic',
     def:'The world\'s largest hydroelectric dam, built on the Yangtze River in Hubei Province, China. Completed 2012.',
     facts:['Capacity: 22,500 MW — world\'s largest single power station by installed capacity','Controls flooding on the Yangtze, protecting 15 million+ people downstream','Improves navigation — 10,000-tonne ships can now reach Chongqing','NEGATIVES: 1.3 million people displaced (largest dam displacement in history)','Submerged 1,300+ archaeological and cultural heritage sites','Environmental: Yangtze River Dolphin (now functionally extinct); Chinese Sturgeon critically endangered'],
-    tip:'For every positive, there is a negative — AQA 6-mark answers must balance social, economic AND environmental impacts.',
+    tip:'For every positive, there is a negative — Edexcel 6-mark answers must balance social, economic AND environmental impacts.',
     related:['energy','watertrans','china']},
 
   watertrans:{title:'China Water Transfer Project',badge:'Economic',sec:'economic',
@@ -552,7 +552,7 @@ const CONTENT = {
   drainage:{title:'The Drainage Basin',badge:'Rivers',sec:'rivers',
     def:'The area of land drained by a river and all its tributaries — an open system with inputs, stores, flows and outputs.',
     facts:['Watershed: the boundary (ridge of high land) between adjacent drainage basins','Source: starting point of the river, usually in upland areas','Tributary: smaller river joining the main river','Confluence: where two rivers join','Mouth: where river meets the sea/lake','Drainage density: total channel length ÷ drainage basin area — higher = faster response to rain'],
-    tip:'Key terms for AQA: source, tributary, confluence, mouth, watershed, floodplain, estuary',
+    tip:'Key Edexcel terms: source, tributary, confluence, mouth, watershed, floodplain, estuary',
     related:['hydrocycle','riverosion','courses']},
 
   riverosion:{title:'River Erosion',badge:'Rivers',sec:'rivers',
@@ -617,7 +617,7 @@ const CONTENT = {
     related:['hydrograph','floodplains','fieldwork']},
 
   fieldwork:{title:'Physical Fieldwork',badge:'Rivers',sec:'rivers',
-    def:'AQA requires fieldwork in at least two contrasting environments collecting both primary and secondary data.',
+    def:'Edexcel Paper 3: one physical and one human investigation. Explain methods, present data, draw conclusions and evaluate reliability.',
     facts:['River width: tape measure stretched across channel at water\'s edge','River depth: metre ruler at regular intervals across width (every 20 cm); calculate mean','Velocity: float method (orange peel travels 1 m; time it) or flow gauge; multiply by 0.8 (correction)','Bedload size: measure 10 stones at each site — intermediate (b) axis in mm','Bedload shape: Powers Roundness Scale (1=angular to 6=well-rounded)','Discharge (Q) = cross-sectional area (m²) × velocity (m/s) → answer in cumecs (m³/s)'],
     tip:'Sampling types: Random (no bias), Systematic (regular intervals), Stratified (proportional by sub-group) — know their pros/cons',
     related:['rivermgmt','hydrograph','dataanalysis']},
@@ -643,7 +643,7 @@ const CONTENT = {
     related:['burgess','hierarchy','megacities']},
 
   dataanalysis:{title:'Data Analysis & Evaluation',badge:'Settlements',sec:'settlements',
-    def:'AQA Paper 3 requires skills in presenting, interpreting, and critically evaluating geographical data.',
+    def:'Edexcel Paper 3 requires skills in presenting, interpreting, and critically evaluating geographical data.',
     facts:['Primary data: collected by you (measurements, questionnaires, photos) — specific but small sample','Secondary data: collected by others (census, OS maps, EA reports) — large scale but may be outdated','Quantitative: numerical data (discharge readings, population counts) — can be statistically analysed','Qualitative: descriptive data (photos, interview responses) — richer context but harder to compare','Spearman\'s Rank Correlation: measures relationship between two ranked datasets (-1 to +1); +1 = perfect positive','Evaluation questions: Was sample size big enough? Was method reliable? Were conditions typical?'],
     tip:'For evaluation: always consider RELIABILITY (accuracy of method), VALIDITY (does it measure what you intended?), and REPRESENTATIVENESS',
     related:['fieldwork','megacities']},
@@ -664,7 +664,7 @@ const CONTENT = {
   desertify:{title:'Desertification (Sahel)',badge:'Climate',sec:'climate',
     def:'The degradation of productive semi-arid land into desert-like conditions — mainly at the margins of existing deserts.',
     facts:['Sahel: semi-arid belt across Africa (Senegal to Ethiopia); 250+ million people depend on it','Physical causes: unreliable rainfall, increasing drought frequency due to climate change','Human causes: overgrazing, overcultivation, population growth, deforestation for fuelwood','Effects: food insecurity (2011 East Africa famine — 250,000+ deaths), mass migration, loss of biodiversity','The Great Green Wall: pan-African project to plant an 8,000 km belt of trees from Senegal to Djibouti','Traditional solutions: Zai pits (stone lines trap water), crop rotation, sustainable herd management'],
-    tip:'Causes are both PHYSICAL (drought) and HUMAN (overgrazing, deforestation) — AQA wants both discussed',
+    tip:'Causes are both PHYSICAL (drought) and HUMAN (overgrazing, deforestation) — Edexcel wants both discussed',
     related:['climchange','deforest']},
 
   climchange:{title:'Causes of Climate Change',badge:'Climate',sec:'climate',
@@ -685,48 +685,48 @@ const CONTENT = {
 const EXAM_Q = {
   erosion:    {q:`Explain two processes of coastal erosion.`,m:4},
   coastlines: {q:`Explain how a headland and bay are formed on a discordant coastline.`,m:4},
-  caves:      {q:`Using a diagram, explain how a stack is formed.`,m:6},
-  deposition: {q:`Explain how a spit is formed. You may use a diagram in your answer.`,m:6},
-  sealevel:   {q:`Explain two reasons why sea levels are rising.`,m:4},
-  isostatic:  {q:`Explain the difference between isostatic and eustatic change.`,m:4},
-  cstmgmt:    {q:`Evaluate the effectiveness of one hard engineering coastal management strategy.`,m:6},
-  sanddunes:  {q:`Describe and explain the changes in vegetation along a sand dune transect.`,m:6},
-  holderness: {q:`Assess the causes and impacts of erosion at a named coastal location you have studied.`,m:9},
-  mangroves:  {q:`Explain the economic and environmental value of mangrove ecosystems.`,m:6},
-  coral:      {q:`Explain the threats facing coral reef ecosystems.`,m:6},
-  ringfire:   {q:`Explain why volcanic activity is concentrated along the Ring of Fire.`,m:4},
-  srilanka:   {q:`Evaluate the success of coastal management strategies at a named location in an LEDC.`,m:9},
-  sectors:    {q:`Explain why the UK economy has shifted from secondary to tertiary sector employment.`,m:4},
-  industri:   {q:`Explain the causes and consequences of deindustrialisation in the UK.`,m:6},
-  globalise:  {q:`Explain how globalisation has affected one named emerging economy.`,m:6},
-  china:      {q:`For a named NEE, explain how its role in the global economy has changed.`,m:9},
-  threegorges:{q:`Evaluate the social, economic and environmental impacts of the Three Gorges Dam.`,m:9},
-  watertrans: {q:`Explain why China needs to manage its water resources.`,m:4},
-  informal:   {q:`Explain the challenges of informal employment in a named city.`,m:4},
-  energy:     {q:`Explain why some countries are more energy secure than others. Use an example.`,m:6},
-  renewable:  {q:`Evaluate the advantages and disadvantages of two named renewable energy sources.`,m:6},
-  hydrocycle: {q:`Explain the processes that transfer water through the hydrological cycle.`,m:4},
-  drainage:   {q:`Define the term watershed and explain its role in a drainage basin.`,m:2},
-  riverosion: {q:`Explain how hydraulic action and abrasion erode a river's channel.`,m:4},
+  caves:      {q:`Using a diagram, explain how a stack is formed from a headland.`,m:6},
+  deposition: {q:`Explain how longshore drift leads to the formation of a spit.`,m:4},
+  sealevel:   {q:`Explain two reasons why sea levels are rising globally.`,m:4},
+  isostatic:  {q:`Explain the difference between eustatic and isostatic change in sea level.`,m:4},
+  cstmgmt:    {q:`Assess the effectiveness of hard engineering as a coastal management strategy.`,m:8},
+  sanddunes:  {q:`Describe and explain the changes in vegetation across a sand dune transect from sea to inland.`,m:6},
+  holderness: {q:`Evaluate the costs and benefits of coastal management at a named UK coastal location.`,m:8},
+  mangroves:  {q:`Explain why mangrove ecosystems are valuable to people and the environment.`,m:4},
+  coral:      {q:`Assess the threats facing coral reef ecosystems and the strategies used to protect them.`,m:8},
+  ringfire:   {q:`Explain why tectonic hazards are concentrated along the Pacific Ring of Fire.`,m:4},
+  srilanka:   {q:`Evaluate the success of integrated coastal management in a named developing country.`,m:8},
+  sectors:    {q:`Explain why the employment structure of the UK has changed since the 1970s.`,m:4},
+  industri:   {q:`Assess the causes and consequences of deindustrialisation in the UK.`,m:6},
+  globalise:  {q:`Explain how globalisation has contributed to economic development in one named country.`,m:6},
+  china:      {q:`Assess the extent to which economic development in China has improved quality of life for its population.`,m:8},
+  threegorges:{q:`Evaluate the social, economic and environmental impacts of the Three Gorges Dam.`,m:8},
+  watertrans: {q:`Explain why China has needed to develop large-scale water management projects.`,m:4},
+  informal:   {q:`Explain the challenges of informal employment in a named city in a developing country.`,m:4},
+  energy:     {q:`Assess the advantages and disadvantages of one named approach to achieving energy security.`,m:8},
+  renewable:  {q:`Explain why many countries are investing in renewable energy sources.`,m:4},
+  hydrocycle: {q:`Explain the role of two processes in transferring water through a drainage basin.`,m:4},
+  drainage:   {q:`Identify two features shown on a drainage basin diagram and explain their role.`,m:4},
+  riverosion: {q:`Explain how hydraulic action and abrasion erode a river channel.`,m:4},
   rivertrans: {q:`Explain how a river transports its load. Refer to at least two methods.`,m:4},
-  courses:    {q:`Compare the characteristics of a river's upper course and lower course.`,m:6},
-  hydrograph: {q:`Explain the factors that affect the lag time on a storm hydrograph.`,m:6},
-  weathering: {q:`Explain the process of freeze-thaw weathering.`,m:4},
-  massmove:   {q:`Explain the factors that increase the risk of mass movement on a slope.`,m:4},
-  waterfalls: {q:`Using a labelled diagram, explain how a waterfall retreats upstream.`,m:6},
-  oxbow:      {q:`Explain how an oxbow lake is formed.`,m:4},
-  floodplains:{q:`Explain how a river floodplain is formed.`,m:4},
-  rivermgmt:  {q:`Evaluate the use of hard engineering strategies to manage flood risk.`,m:9},
-  fieldwork:  {q:`Explain how you would measure river velocity in the field. Assess the reliability of your method.`,m:6},
-  hierarchy:  {q:`Explain what is meant by a settlement hierarchy.`,m:2},
-  burgess:    {q:`Describe the Burgess model and evaluate its usefulness for understanding modern UK cities.`,m:6},
-  landuse:    {q:`Explain the process of gentrification and its effects on urban areas.`,m:4},
-  dataanalysis:{q:`Explain one advantage and one disadvantage of using primary data in geographical fieldwork.`,m:4},
-  megacities: {q:`Explain the challenges of rapid urban growth in a named megacity.`,m:9},
-  deforest:   {q:`For a named tropical rainforest, explain the causes and effects of deforestation.`,m:9},
-  desertify:  {q:`Explain the human causes of desertification in a named area.`,m:6},
+  courses:    {q:`Compare the characteristics of a river channel in the upper course with those in the lower course.`,m:6},
+  hydrograph: {q:`Explain two physical factors that cause a flashy storm hydrograph response.`,m:4},
+  weathering: {q:`Explain the process of freeze-thaw weathering and how it contributes to slope instability.`,m:4},
+  massmove:   {q:`Explain why heavy rainfall can trigger mass movement on coastal cliffs or river banks.`,m:4},
+  waterfalls: {q:`Using a diagram, explain how a waterfall and gorge are formed.`,m:6},
+  oxbow:      {q:`Explain the process by which an oxbow lake is formed from a meander.`,m:4},
+  floodplains:{q:`Explain how a floodplain and levées are formed in the lower course of a river.`,m:4},
+  rivermgmt:  {q:`Assess the extent to which hard engineering is a sustainable approach to managing flood risk.`,m:8},
+  fieldwork:  {q:`Explain one method used to collect primary data in the field. Assess its reliability.`,m:6},
+  hierarchy:  {q:`Describe the characteristics of settlements at two different levels of the settlement hierarchy.`,m:4},
+  burgess:    {q:`Assess the usefulness of the Burgess model for understanding land use in a UK city.`,m:6},
+  landuse:    {q:`Explain how and why urban land use patterns change over time.`,m:4},
+  dataanalysis:{q:`Explain one advantage and one disadvantage of using primary data collected in fieldwork.`,m:4},
+  megacities: {q:`Assess the social and economic challenges of rapid urban growth in a named megacity.`,m:8},
+  deforest:   {q:`Assess the environmental and economic impacts of deforestation in a named tropical rainforest.`,m:8},
+  desertify:  {q:`Explain the human and physical causes of desertification in a named semi-arid region.`,m:6},
   climchange: {q:`Explain the natural and human causes of climate change.`,m:6},
-  volcanoes:  {q:`Explain the impact of volcanic eruptions on the Earth's climate.`,m:4},
+  volcanoes:  {q:`Explain how volcanic eruptions affect global temperatures in the short term.`,m:4},
 };
 
 
@@ -1318,6 +1318,7 @@ sealevel: `<svg width="100%" viewBox="0 0 274 130" xmlns="http://www.w3.org/2000
 <text x="137" y="108" text-anchor="middle" font-size="6.5" fill="#374151">Current average rise: ~3.7 mm/year | Isostatic uplift (land rises) vs Eustatic (sea level rise)</text>
 <text x="137" y="120" text-anchor="middle" font-size="6.5" fill="#374151">Scotland rising ~2 mm/year (post-glacial rebound) — reduces relative sea level rise there</text>
 </svg>`,
+
 };
 
 // ── COLORS ────────────────────────────────────────────────────────────────
@@ -1545,7 +1546,7 @@ function renderRevise(inner,c,sc){
     </div>
     ${c.tip?`<div class="d-tip" style="background:${sc.f};color:${sc.t}">💡 ${c.tip}</div>`:''}
     ${c.mnemonic?`<div class="d-mnem" style="color:${sc.t};border-color:${sc.s}">✦ ${c.mnemonic}</div>`:''}
-    ${eq?`<div><div class="d-lbl" style="margin-bottom:4px">AQA exam question <span class="d-marks">${eq.m} marks</span></div><div class="d-examq">${eq.q}</div></div>`:''}
+    ${eq?`<div><div class="d-lbl" style="margin-bottom:4px">Edexcel exam question <span class="d-marks">${eq.m} marks</span></div><div class="d-examq">${eq.q}</div></div>`:''}
     <div>
       <div class="d-lbl" style="margin-bottom:6px">How confident are you?</div>
       <div class="conf-row">
