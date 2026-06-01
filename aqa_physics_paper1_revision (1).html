@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQA GCSE Physics Paper 1 — Triple Science Revision</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Barlow+Condensed:wght@300;500;700;900&family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080b10; --surf:#0f1420; --surf2:#161d2e; --border:#1c2538;
+  --e1:#ff7043; --e2:#00e5ff; --e3:#76ff03; --e4:#e040fb;
+  --e1d:#ff4500; --e2d:#00b0c8; --e3d:#4caf00; --e4d:#a800d4;
+  --text:#dde4ee; --muted:#5a6a85; --danger:#f44336; --ok:#00c853;
+  --ht:#ffd740; --trip:#69f0ae;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;line-height:1.65;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{position:relative;overflow:hidden;padding:44px 20px 36px;text-align:center;border-bottom:3px solid var(--e2);background:linear-gradient(180deg,#05080f 0%,#0d1525 100%)}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(0,229,255,.1) 0%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--danger);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;padding:5px 14px;text-transform:uppercase;margin-bottom:18px;animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.55}}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(42px,9vw,80px);line-height:.95;text-transform:uppercase;letter-spacing:-1px;color:#fff;margin-bottom:10px}
+.hero h1 span{color:var(--e2)}
+.hero p{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:6px}
+.tag-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;padding:4px 10px;letter-spacing:1px;text-transform:uppercase}
+.tag-ht{background:var(--ht);color:#000}
+.tag-trip{background:var(--trip);color:#000}
+.tag-both{background:var(--muted);color:#fff}
+
+/* ── NAV ── */
+.nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:14px 16px;background:var(--surf);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;backdrop-filter:blur(8px)}
+.nav a{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);text-decoration:none;padding:5px 10px;border:1px solid var(--border);transition:all .15s}
+.nav a:hover,.nav a.active{color:#fff;border-color:currentColor}
+.nav a.t1{color:var(--e1)}.nav a.t2{color:var(--e2)}.nav a.t3{color:var(--e3)}.nav a.t4{color:var(--e4)}
+
+/* ── SECTION WRAPPER ── */
+.sec{max-width:1160px;margin:56px auto;padding:0 22px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--border);padding-bottom:14px;margin-bottom:30px}
+.tnum{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px}
+.t1 .tnum{background:var(--e1);color:#000}
+.t2 .tnum{background:var(--e2);color:#000}
+.t3 .tnum{background:var(--e3);color:#000}
+.t4 .tnum{background:var(--e4);color:#000}
+.sec-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:44px;text-transform:uppercase;letter-spacing:-0.5px}
+.t1 .sec-head h2{color:var(--e1)}.t2 .sec-head h2{color:var(--e2)}.t3 .sec-head h2{color:var(--e3)}.t4 .sec-head h2{color:var(--e4)}
+.subsec{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin:28px 0 14px;padding-left:12px;border-left:3px solid var(--muted)}
+.t1 .subsec{border-color:var(--e1)}.t2 .subsec{border-color:var(--e2)}.t3 .subsec{border-color:var(--e3)}.t4 .subsec{border-color:var(--e4)}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(max-width:960px){.g3{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}}
+
+/* ── CARDS ── */
+.card{background:var(--surf);border:1px solid var(--border);padding:18px 20px}
+.card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:12px}
+.card p{color:var(--muted);font-size:14px;margin-bottom:8px}
+
+/* ── FORMULA BOXES ── */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:12px 0}
+.f{background:var(--surf2);padding:11px 14px}
+.f .fn{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.f .fe{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:700}
+.f .fu{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px}
+.t1 .f{border-left:3px solid var(--e1)}.t1 .f .fe{color:var(--e1)}
+.t2 .f{border-left:3px solid var(--e2)}.t2 .f .fe{color:var(--e2)}
+.t3 .f{border-left:3px solid var(--e3)}.t3 .f .fe{color:var(--e3)}
+.t4 .f{border-left:3px solid var(--e4)}.t4 .f .fe{color:var(--e4)}
+.f.ht{border-left:3px solid var(--ht)}.f.ht .fe{color:var(--ht)}
+.f.trip{border-left:3px solid var(--trip)}.f.trip .fe{color:var(--trip)}
+
+/* ── FACT LISTS ── */
+.fl{list-style:none}
+.fl li{padding:7px 0 7px 22px;border-bottom:1px solid var(--border);font-size:14px;color:#c5ced e;position:relative}
+.fl li::before{content:'›';position:absolute;left:0;top:8px;font-size:14px}
+.t1 .fl li::before{color:var(--e1)}.t2 .fl li::before{color:var(--e2)}.t3 .fl li::before{color:var(--e3)}.t4 .fl li::before{color:var(--e4)}
+
+/* ── HIGHLIGHTS ── */
+.ho{background:var(--e1);color:#000;padding:1px 5px;font-weight:700}
+.hb{background:var(--e2);color:#000;padding:1px 5px;font-weight:700}
+.hg{background:var(--e3);color:#000;padding:1px 5px;font-weight:700}
+.hp{background:var(--e4);color:#000;padding:1px 5px;font-weight:700}
+.hy{background:var(--ht);color:#000;padding:1px 5px;font-weight:700}
+.htr{background:var(--trip);color:#000;padding:1px 5px;font-weight:700}
+
+/* ── ALERT BOXES ── */
+.warn,.tip,.ht-box,.trip-box{padding:12px 16px;margin:14px 0;font-size:13px;border:1px solid}
+.warn{background:rgba(244,67,54,.1);border-color:var(--danger)}
+.warn strong{color:var(--danger)}
+.tip{background:rgba(0,200,83,.1);border-color:var(--ok)}
+.tip strong{color:var(--ok)}
+.ht-box{background:rgba(255,215,64,.1);border-color:var(--ht)}
+.ht-box strong{color:var(--ht)}
+.trip-box{background:rgba(105,240,174,.1);border-color:var(--trip)}
+.trip-box strong{color:var(--trip)}
+
+/* ── TABLES ── */
+table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0}
+th{background:var(--surf2);font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:9px 12px;text-align:left;border-bottom:2px solid var(--border);color:var(--muted)}
+td{padding:8px 12px;border-bottom:1px solid var(--border);color:#c5cedc;vertical-align:top}
+tr:hover td{background:rgba(255,255,255,.02)}
+
+/* ── DIAGRAMS ── */
+.dbox{background:var(--surf2);border:1px solid var(--border);padding:18px;margin:16px 0;text-align:center}
+.dbox figcaption{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:1px}
+svg text{font-family:'IBM Plex Mono',monospace}
+
+/* ── STEP BOXES ── */
+.steps{counter-reset:s}
+.step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)}
+.step-n{counter-increment:s;min-width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0}
+.t1 .step-n{background:var(--e1);color:#000}
+.t2 .step-n{background:var(--e2);color:#000}
+.t3 .step-n{background:var(--e3);color:#000}
+.t4 .step-n{background:var(--e4);color:#000}
+.step-text{font-size:14px;padding-top:6px;color:#c5cedc}
+
+/* ── SMALL BADGE ── */
+.htag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;background:var(--ht);color:#000;padding:1px 6px;text-transform:uppercase;letter-spacing:1px;vertical-align:middle;margin-left:4px}
+.trptag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;background:var(--trip);color:#000;padding:1px 6px;text-transform:uppercase;letter-spacing:1px;vertical-align:middle;margin-left:4px}
+
+/* ── SCROLL TOP ── */
+.top{position:fixed;bottom:20px;right:20px;background:var(--surf);border:1px solid var(--e2);color:var(--e2);font-family:'IBM Plex Mono',monospace;font-size:11px;padding:7px 12px;text-decoration:none;z-index:300;letter-spacing:1px}
+
+/* ── REQUIRED PRACTICAL ── */
+.req-p{background:var(--surf);border:1px solid #ffd74040;padding:16px 18px;margin:14px 0}
+.req-p h4{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:var(--ht);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.req-p p,.req-p li{font-size:13px;color:#c5cedc}
+.req-p ul{padding-left:18px}
+.req-p ul li{margin-bottom:4px}
+
+/* ── MODEL TIMELINE ── */
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border)}
+.tl-year{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;min-width:65px;color:var(--e4);padding-top:3px}
+.tl-text{font-size:14px;color:#c5cedc}
+.tl-text strong{color:#fff}
+
+/* ── STORE GRID ── */
+.store-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:12px 0}
+.store-c{background:var(--surf2);border:1px solid var(--border);padding:12px;text-align:center}
+.store-c .ic{font-size:24px;margin-bottom:6px}
+.store-c .sn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;color:#fff;letter-spacing:.5px}
+.store-c .se{font-size:11px;color:var(--muted);margin-top:3px}
+
+/* ── COLS ── */
+.col2{columns:2;column-gap:22px}
+@media(max-width:600px){.col2{columns:1}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">⚡ LAST-MINUTE CRAMMER — EXAM EDITION</div>
+  <h1>AQA GCSE<br><span>Physics Paper 1</span></h1>
+  <p>Triple / Separate Science · 8463/1H (Higher) or 8463/1F (Foundation) · Topics 1–4</p>
+  <div class="tag-row">
+    <span class="tag tag-trip">🌿 Triple Only content marked</span>
+    <span class="tag tag-ht">⭐ Higher Only content marked</span>
+    <span class="tag tag-both">✦ Both tiers / Combined too</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#energy" class="t1">① Energy</a>
+  <a href="#electricity" class="t2">② Electricity</a>
+  <a href="#particle" class="t3">③ Particle Model</a>
+  <a href="#atomic" class="t4">④ Atomic Structure</a>
+  <a href="#practicals">Required Practicals</a>
+  <a href="#formulas">All Formulas</a>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     TOPIC 1 — ENERGY
+════════════════════════════════════════════ -->
+<div id="energy" class="sec t1">
+  <div class="sec-head">
+    <span class="tnum">Topic 1</span>
+    <h2>Energy</h2>
+  </div>
+
+  <!-- 1.1 STORES -->
+  <div class="subsec">1.1 Energy Stores &amp; Transfers</div>
+  <div class="store-g">
+    <div class="store-c"><div class="ic">🔥</div><div class="sn">Thermal</div><div class="se">Hot tea, fire, hand warmer</div></div>
+    <div class="store-c"><div class="ic">⚡</div><div class="sn">Chemical</div><div class="se">Battery, food, fuel</div></div>
+    <div class="store-c"><div class="ic">💨</div><div class="sn">Kinetic</div><div class="se">Moving car, spinning wheel</div></div>
+    <div class="store-c"><div class="ic">🌍</div><div class="sn">Gravitational PE</div><div class="se">Book on shelf, diver on board</div></div>
+    <div class="store-c"><div class="ic">🌀</div><div class="sn">Elastic PE</div><div class="se">Stretched spring, compressed gas</div></div>
+    <div class="store-c"><div class="ic">☢️</div><div class="sn">Nuclear</div><div class="se">Uranium, stars</div></div>
+    <div class="store-c"><div class="ic">⚡</div><div class="sn">Electrostatic</div><div class="se">Charged parallel plates</div></div>
+    <div class="store-c"><div class="ic">🧲</div><div class="sn">Magnetic</div><div class="se">Two magnets attracted</div></div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>Energy Transfer Pathways</h3>
+    <p style="font-size:14px;color:#c5cedc;margin-bottom:8px">Energy is always conserved — it moves between stores by these pathways:</p>
+    <div class="g4">
+      <div style="background:var(--surf2);padding:12px;border-left:3px solid var(--e1)"><strong style="color:var(--e1)">Mechanically</strong><br><span style="font-size:13px;color:var(--muted)">Forces acting (e.g. pushing, stretching)</span></div>
+      <div style="background:var(--surf2);padding:12px;border-left:3px solid var(--e1)"><strong style="color:var(--e1)">Electrically</strong><br><span style="font-size:13px;color:var(--muted)">Current carrying energy round a circuit</span></div>
+      <div style="background:var(--surf2);padding:12px;border-left:3px solid var(--e1)"><strong style="color:var(--e1)">By Heating</strong><br><span style="font-size:13px;color:var(--muted)">Conduction, convection, radiation</span></div>
+      <div style="background:var(--surf2);padding:12px;border-left:3px solid var(--e1)"><strong style="color:var(--e1)">By Radiation</strong><br><span style="font-size:13px;color:var(--muted)">EM waves (e.g. light, infrared, microwave)</span></div>
+    </div>
+  </div>
+
+  <!-- SANKEY DIAGRAM -->
+  <div class="subsec">Sankey Diagrams &amp; Efficiency</div>
+  <div class="dbox">
+    <svg viewBox="0 0 560 175" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%">
+      <!-- INPUT block -->
+      <rect x="0" y="52" width="110" height="70" rx="4" fill="#ff7043"/>
+      <text x="55" y="81" text-anchor="middle" fill="#000" font-size="11" font-weight="bold">INPUT</text>
+      <text x="55" y="96" text-anchor="middle" fill="#000" font-size="12">100 J</text>
+      <text x="55" y="110" text-anchor="middle" fill="#00000090" font-size="10">(e.g. electrical)</text>
+      <!-- Wide useful output arrow top -->
+      <polygon points="110,52 150,36 150,100 110,100" fill="#ff7043"/>
+      <rect x="150" y="36" width="150" height="64" rx="3" fill="#76ff03"/>
+      <text x="225" y="63" text-anchor="middle" fill="#000" font-size="11" font-weight="bold">USEFUL OUTPUT</text>
+      <text x="225" y="78" text-anchor="middle" fill="#000" font-size="11">40 J</text>
+      <text x="225" y="93" text-anchor="middle" fill="#000" font-size="10">e.g. light / motion</text>
+      <!-- Thin wasted heat arrow bottom -->
+      <polygon points="110,100 150,100 150,122 110,122" fill="#ff7043"/>
+      <rect x="150" y="100" width="150" height="36" rx="3" fill="#5a6a85"/>
+      <text x="225" y="122" text-anchor="middle" fill="#fff" font-size="11">60 J — wasted (heat)</text>
+      <!-- Width annotation lines -->
+      <line x1="310" y1="36" x2="360" y2="36" stroke="#76ff03" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="310" y1="100" x2="360" y2="100" stroke="#5a6a85" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="310" y1="136" x2="360" y2="136" stroke="#5a6a85" stroke-width="1" stroke-dasharray="3,2"/>
+      <!-- Formulas panel -->
+      <rect x="365" y="28" width="185" height="120" rx="4" fill="var(--surf)" stroke="var(--e1)" stroke-width="1"/>
+      <text x="458" y="48" text-anchor="middle" fill="#ff7043" font-size="12" font-weight="bold">EFFICIENCY</text>
+      <text x="458" y="70" text-anchor="middle" fill="#e2e8f0" font-size="12">η = useful out / total in</text>
+      <text x="458" y="90" text-anchor="middle" fill="#e2e8f0" font-size="12">= 40 / 100 = 0.4</text>
+      <text x="458" y="110" text-anchor="middle" fill="#76ff03" font-size="12">= 40%</text>
+      <text x="458" y="132" text-anchor="middle" fill="#5a6a85" font-size="10">Width of arrow ∝ energy</text>
+      <!-- Note about waste -->
+      <text x="50" y="165" text-anchor="middle" fill="#5a6a85" font-size="10">Arrow widths must be proportional to the energy amounts</text>
+    </svg>
+    <figcaption>Sankey diagram — the total input arrow splits into useful and wasted outputs. Wider = more energy.</figcaption>
+  </div>
+
+  <!-- THERMAL ENERGY TRANSFER -->
+  <div class="subsec">Reducing Thermal Energy Transfers</div>
+  <div class="dbox">
+    <svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%">
+      <!-- Three columns -->
+      <!-- CONDUCTION -->
+      <rect x="10" y="15" width="160" height="115" rx="5" fill="var(--surf)" stroke="#ff7043" stroke-width="1.5"/>
+      <text x="90" y="35" text-anchor="middle" fill="#ff7043" font-size="13" font-weight="bold">CONDUCTION</text>
+      <text x="90" y="52" text-anchor="middle" fill="#5a6a85" font-size="10">Mainly solids</text>
+      <!-- particles vibrating -->
+      <circle cx="50" cy="85" r="8" fill="#ff7043" opacity=".8"/><circle cx="72" cy="80" r="8" fill="#ff7043" opacity=".7"/>
+      <circle cx="94" cy="85" r="8" fill="#ff704380" opacity=".6"/><circle cx="116" cy="89" r="8" fill="#ff704350" opacity=".5"/>
+      <circle cx="138" cy="93" r="8" fill="#ff704320" opacity=".3"/>
+      <!-- vibration arrows -->
+      <text x="50" y="108" text-anchor="middle" fill="#ff7043" font-size="9">↕ vibrate</text>
+      <text x="90" y="122" text-anchor="middle" fill="#5a6a85" font-size="10">KE transfers particle to particle</text>
+      <!-- CONVECTION -->
+      <rect x="200" y="15" width="160" height="115" rx="5" fill="var(--surf)" stroke="#ff7043" stroke-width="1.5"/>
+      <text x="280" y="35" text-anchor="middle" fill="#ff7043" font-size="13" font-weight="bold">CONVECTION</text>
+      <text x="280" y="52" text-anchor="middle" fill="#5a6a85" font-size="10">Fluids only (liquids + gases)</text>
+      <path d="M 240 100 Q 240 60 280 60 Q 320 60 320 100 Q 280 130 240 100 Z" fill="none" stroke="#ff7043" stroke-width="1.5"/>
+      <text x="280" y="82" text-anchor="middle" fill="#ff7043" font-size="9" font-weight="bold">↑ hot, less dense</text>
+      <text x="280" y="97" text-anchor="middle" fill="#ff704370" font-size="9">↓ cool, more dense</text>
+      <text x="280" y="122" text-anchor="middle" fill="#5a6a85" font-size="10">Convection currents form</text>
+      <!-- RADIATION -->
+      <rect x="390" y="15" width="160" height="115" rx="5" fill="var(--surf)" stroke="#ff7043" stroke-width="1.5"/>
+      <text x="470" y="35" text-anchor="middle" fill="#ff7043" font-size="13" font-weight="bold">RADIATION</text>
+      <text x="470" y="52" text-anchor="middle" fill="#5a6a85" font-size="10">No medium needed</text>
+      <!-- IR waves -->
+      <circle cx="430" cy="88" r="14" fill="#ff7043" opacity=".6"/>
+      <text x="430" y="92" text-anchor="middle" fill="#000" font-size="9" font-weight="bold">HOT</text>
+      <path d="M 447 82 Q 458 72 470 82 Q 482 92 470 102" fill="none" stroke="#ff7043" stroke-width="1.5"/>
+      <path d="M 453 80 Q 463 70 473 80 Q 483 90 473 100" fill="none" stroke="#ff704380" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="510" y="90" fill="#ff7043" font-size="11">→ IR</text>
+      <text x="470" y="122" text-anchor="middle" fill="#5a6a85" font-size="10">Infrared EM radiation emitted</text>
+    </svg>
+    <figcaption>Three methods of thermal energy transfer — conduction, convection, radiation</figcaption>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <h3>Ways to Reduce Unwanted Transfer</h3>
+      <ul class="fl">
+        <li><span class="ho">Lubrication</span> — reduces friction between surfaces, less heat wasted</li>
+        <li><span class="ho">Thermal insulation</span> — traps air (poor conductor), reduces conduction/convection</li>
+        <li><span class="ho">Cavity wall insulation</span> — foam filled gap; reduces convection in air gap</li>
+        <li><span class="ho">Double-glazing</span> — air/argon gap between panes insulates</li>
+        <li><span class="ho">Loft insulation</span> — fibreglass traps air, reduces conduction through ceiling</li>
+        <li>Shiny surfaces reflect IR radiation back → less heat lost by radiation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Formulas</h3>
+      <div class="fgrid">
+        <div class="f"><div class="fn">Kinetic Energy</div><div class="fe">KE = ½mv²</div><div class="fu">m=kg, v=m/s, KE=J</div></div>
+        <div class="f"><div class="fn">Gravitational PE</div><div class="fe">GPE = mgh</div><div class="fu">g=9.8 N/kg, h=m</div></div>
+        <div class="f"><div class="fn">Elastic PE</div><div class="fe">Ee = ½ke²</div><div class="fu">k=N/m, e=extension (m)</div></div>
+        <div class="f"><div class="fn">Specific Heat Cap.</div><div class="fe">ΔE = mcΔθ</div><div class="fu">c=J/kg°C, θ=°C</div></div>
+        <div class="f"><div class="fn">Power</div><div class="fe">P = E/t</div><div class="fu">P=W, E=J, t=s</div></div>
+        <div class="f"><div class="fn">Efficiency</div><div class="fe">η = Eu / Et</div><div class="fu">×100 for %, decimal ≤ 1</div></div>
+      </div>
+      <div class="warn" style="margin-top:8px"><strong>⚠ Common mistake:</strong> SHC of water = <strong>4200 J/kg°C</strong>. This is given in the exam but know it!</div>
+    </div>
+  </div>
+
+  <!-- ENERGY RESOURCES -->
+  <div class="subsec">1.3 National &amp; Global Energy Resources</div>
+  <table>
+    <thead><tr><th>Resource</th><th>Renewable?</th><th>Reliable?</th><th>Environmental Impact</th><th>Triple — extra detail</th></tr></thead>
+    <tbody>
+      <tr><td style="color:#ff7043;font-weight:bold">Fossil Fuels (coal/oil/gas)</td><td style="color:var(--danger)">✗ No</td><td style="color:var(--ok)">✓ High</td><td>CO₂ (global warming), SO₂ (acid rain), NOₓ</td><td>Burned in power stations; still ~70% UK mix</td></tr>
+      <tr><td style="color:#ffd740;font-weight:bold">Nuclear</td><td style="color:var(--danger)">✗ No</td><td style="color:var(--ok)">✓ High</td><td>Radioactive waste; costly decommission; no CO₂</td><td>Fission of U-235; long construction time</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Wind</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--danger)">✗ Intermittent</td><td>Visual/noise; bird deaths; no pollution</td><td>Needs backup for calm days; offshore more reliable</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Solar (PV)</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--danger)">✗ Intermittent</td><td>None in use; PV manufacture has footprint</td><td>Only day/sunshine; costs falling rapidly</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Hydroelectric</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--ok)">✓ High</td><td>Flooding habitats; dam construction</td><td>GPE of water → KE → electric; pumped storage useful</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Tidal</td><td style="color:var(--ok)">✓ Yes</td><td style="color:#ffd740">~ Predictable</td><td>Disrupts estuary ecology</td><td>Predictable unlike wind/solar; very few locations</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Wave</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--danger)">✗ Variable</td><td>Low; devices can be damaged in storms</td><td>Kinetic energy of waves; currently small scale</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Geothermal</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--ok)">✓ High</td><td>Very low; some H₂S released</td><td>Only viable near tectonic activity (Iceland, NZ)</td></tr>
+      <tr><td style="color:var(--ok);font-weight:bold">Biomass</td><td style="color:var(--ok)">✓ Yes</td><td style="color:var(--ok)">✓ High</td><td>CO₂ emitted — but plants reabsorb; land use</td><td>Considered carbon-neutral in theory</td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>⚠ EXAM TRAP:</strong> Nuclear is NOT renewable — uranium is a finite resource. "Reliable" ≠ "Renewable". Nuclear = reliable but non-renewable.</div>
+  <div class="tip"><strong>✓ 6-MARK ANSWERS on energy resources always need:</strong> reliability, cost, environmental impact, and social/political factors for full marks.</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TOPIC 2 — ELECTRICITY
+════════════════════════════════════════════ -->
+<div id="electricity" class="sec t2">
+  <div class="sec-head">
+    <span class="tnum">Topic 2</span>
+    <h2>Electricity</h2>
+  </div>
+
+  <!-- CIRCUIT SYMBOLS -->
+  <div class="subsec">2.1 Circuit Symbols</div>
+  <div class="dbox">
+    <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="max-width:620px;width:100%">
+      <!-- Row 1 -->
+      <!-- Cell -->
+      <text x="50" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">CELL</text>
+      <line x1="30" y1="30" x2="70" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="44" y1="22" x2="44" y2="38" stroke="#00e5ff" stroke-width="3"/>
+      <line x1="56" y1="25" x2="56" y2="35" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Battery (two cells) -->
+      <text x="130" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">BATTERY</text>
+      <line x1="100" y1="30" x2="160" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="113" y1="22" x2="113" y2="38" stroke="#00e5ff" stroke-width="3"/>
+      <line x1="125" y1="25" x2="125" y2="35" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="135" y1="22" x2="135" y2="38" stroke="#00e5ff" stroke-width="3"/>
+      <line x1="147" y1="25" x2="147" y2="35" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Open switch -->
+      <text x="215" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">SWITCH (OPEN)</text>
+      <circle cx="195" cy="30" r="3" fill="#00e5ff"/>
+      <circle cx="235" cy="30" r="3" fill="#00e5ff"/>
+      <line x1="195" y1="30" x2="198" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="232" y1="30" x2="235" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="198" y1="30" x2="228" y2="22" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Resistor -->
+      <text x="305" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">RESISTOR</text>
+      <line x1="280" y1="30" x2="295" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <rect x="295" y="23" width="40" height="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="335" y1="30" x2="330" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Variable resistor -->
+      <text x="405" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">VARIABLE R</text>
+      <line x1="375" y1="30" x2="390" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <rect x="390" y="23" width="40" height="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="430" y1="30" x2="438" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="406" y1="37" x2="416" y2="20" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="416" y="18" fill="#00e5ff" font-size="10">→</text>
+      <!-- Lamp -->
+      <text x="505" y="18" text-anchor="middle" fill="#5a6a85" font-size="10">LAMP (BULB)</text>
+      <line x1="480" y1="30" x2="492" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <circle cx="505" cy="30" r="12" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="496" y1="21" x2="514" y2="39" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="514" y1="21" x2="496" y2="39" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="517" y1="30" x2="530" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Row 2 -->
+      <!-- Ammeter -->
+      <text x="50" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">AMMETER</text>
+      <line x1="25" y1="100" x2="35" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <circle cx="50" cy="100" r="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="50" y="104" text-anchor="middle" fill="#00e5ff" font-size="12" font-weight="bold">A</text>
+      <line x1="64" y1="100" x2="75" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Voltmeter -->
+      <text x="140" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">VOLTMETER</text>
+      <line x1="115" y1="100" x2="125" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <circle cx="140" cy="100" r="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="140" y="104" text-anchor="middle" fill="#00e5ff" font-size="12" font-weight="bold">V</text>
+      <line x1="154" y1="100" x2="165" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Diode -->
+      <text x="230" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">DIODE</text>
+      <line x1="205" y1="100" x2="218" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <polygon points="218,91 218,109 234,100" fill="#00e5ff"/>
+      <line x1="234" y1="91" x2="234" y2="109" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="234" y1="100" x2="255" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- LED -->
+      <text x="310" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">LED</text>
+      <line x1="285" y1="100" x2="298" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <polygon points="298,91 298,109 314,100" fill="#00e5ff"/>
+      <line x1="314" y1="91" x2="314" y2="109" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="314" y1="100" x2="335" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Light arrows for LED -->
+      <line x1="302" y1="89" x2="294" y2="80" stroke="#ffd740" stroke-width="1.5"/>
+      <text x="293" y="78" fill="#ffd740" font-size="11">↗</text>
+      <line x1="308" y1="87" x2="302" y2="77" stroke="#ffd740" stroke-width="1.5"/>
+      <!-- LDR -->
+      <text x="405" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">LDR</text>
+      <line x1="375" y1="100" x2="390" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <rect x="390" y="93" width="30" height="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="420" y1="100" x2="435" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="380" y1="86" x2="390" y2="94" stroke="#ffd740" stroke-width="1.5"/><text x="376" y="84" fill="#ffd740" font-size="10">☀</text>
+      <line x1="386" y1="83" x2="396" y2="91" stroke="#ffd740" stroke-width="1.5"/>
+      <!-- Thermistor -->
+      <text x="500" y="85" text-anchor="middle" fill="#5a6a85" font-size="10">THERMISTOR</text>
+      <line x1="470" y1="100" x2="485" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <rect x="485" y="93" width="30" height="14" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="515" y1="100" x2="530" y2="100" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="500" y="118" text-anchor="middle" fill="#ffd740" font-size="10">T°</text>
+      <!-- Row 3: Series vs Parallel summary diagram -->
+      <text x="160" y="155" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">SERIES CIRCUIT</text>
+      <!-- Series rect -->
+      <rect x="30" y="162" width="250" height="100" rx="6" fill="none" stroke="#00e5ff" stroke-width="2"/>
+      <!-- Battery in left side -->
+      <line x1="30" y1="195" x2="30" y2="210" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="22" y1="195" x2="38" y2="195" stroke="#00e5ff" stroke-width="3"/>
+      <line x1="24" y1="210" x2="36" y2="210" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Ammeter in bottom -->
+      <circle cx="155" cy="262" r="9" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="155" y="266" text-anchor="middle" fill="#00e5ff" font-size="10">A</text>
+      <!-- Resistors top -->
+      <rect x="75" y="156" width="40" height="14" rx="1" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="95" y="152" text-anchor="middle" fill="#5a6a85" font-size="9">R₁</text>
+      <rect x="160" y="156" width="40" height="14" rx="1" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="180" y="152" text-anchor="middle" fill="#5a6a85" font-size="9">R₂</text>
+      <!-- Rules -->
+      <text x="160" y="285" text-anchor="middle" fill="#5a6a85" font-size="10">Same current through all components</text>
+      <text x="160" y="295" text-anchor="middle" fill="#5a6a85" font-size="10">Voltages ADD: V = V₁ + V₂</text>
+      <text x="160" y="305" text-anchor="middle" fill="#5a6a85" font-size="10">Rtotal = R₁ + R₂</text>
+      <!-- Parallel circuit -->
+      <text x="455" y="155" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">PARALLEL CIRCUIT</text>
+      <line x1="325" y1="162" x2="325" y2="263" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="580" y1="162" x2="580" y2="263" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="325" y1="162" x2="580" y2="162" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="325" y1="263" x2="580" y2="263" stroke="#00e5ff" stroke-width="2"/>
+      <!-- Battery left side -->
+      <line x1="325" y1="197" x2="325" y2="212" stroke="#00e5ff" stroke-width="2"/>
+      <line x1="317" y1="197" x2="333" y2="197" stroke="#00e5ff" stroke-width="3"/>
+      <line x1="319" y1="212" x2="331" y2="212" stroke="#00e5ff" stroke-width="1.5"/>
+      <!-- Branch 1 -->
+      <line x1="395" y1="162" x2="395" y2="263" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="5,3" opacity=".7"/>
+      <rect x="375" y="200" width="40" height="14" rx="1" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="395" y="196" text-anchor="middle" fill="#5a6a85" font-size="9">R₁</text>
+      <!-- Branch 2 -->
+      <line x1="500" y1="162" x2="500" y2="263" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="5,3" opacity=".7"/>
+      <rect x="480" y="200" width="40" height="14" rx="1" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="500" y="196" text-anchor="middle" fill="#5a6a85" font-size="9">R₂</text>
+      <!-- Rules -->
+      <text x="455" y="280" text-anchor="middle" fill="#5a6a85" font-size="10">Same voltage across each branch</text>
+      <text x="455" y="290" text-anchor="middle" fill="#5a6a85" font-size="10">Currents ADD: I = I₁ + I₂</text>
+      <text x="455" y="300" text-anchor="middle" fill="#5a6a85" font-size="10">1/R = 1/R₁ + 1/R₂ (HT)</text>
+    </svg>
+    <figcaption>Circuit symbols and series vs parallel layouts</figcaption>
+  </div>
+
+  <!-- FORMULAS -->
+  <div class="g2" style="margin-top:18px">
+    <div class="card">
+      <h3>Electricity Formulas</h3>
+      <div class="fgrid">
+        <div class="f"><div class="fn">Ohm's Law</div><div class="fe">V = IR</div><div class="fu">V=V, I=A, R=Ω</div></div>
+        <div class="f"><div class="fn">Charge Flow</div><div class="fe">Q = It</div><div class="fu">Q=C (Coulombs), t=s</div></div>
+        <div class="f"><div class="fn">Power 1</div><div class="fe">P = IV</div><div class="fu">P=W</div></div>
+        <div class="f"><div class="fn">Power 2</div><div class="fe">P = I²R</div><div class="fu">Useful if no V given</div></div>
+        <div class="f"><div class="fn">Energy</div><div class="fe">E = Pt</div><div class="fu">E=J, P=W, t=s</div></div>
+        <div class="f"><div class="fn">Energy (charge)</div><div class="fe">E = QV</div><div class="fu">Q=C, V=V</div></div>
+        <div class="f"><div class="fn">Series R</div><div class="fe">R = R₁+R₂+…</div><div class="fu">Total R increases</div></div>
+        <div class="f ht"><div class="fn">Parallel R ⭐</div><div class="fe">1/R = 1/R₁+1/R₂</div><div class="fu">Total R decreases!</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Key Facts — Current, Voltage, Resistance</h3>
+      <ul class="fl">
+        <li>Current = flow of <span class="hb">charge</span> (electrons). Measured in Amps (A).</li>
+        <li>Conventional current flows + → −; electrons flow − → +</li>
+        <li>Potential difference = energy transferred per unit charge. Measured in Volts (V).</li>
+        <li><span class="hb">Ohmic conductor</span> — straight I-V graph; constant resistance at constant temp</li>
+        <li><span class="hb">Filament bulb</span> — resistance increases as temperature increases (non-ohmic, curved I-V)</li>
+        <li><span class="hb">Diode</span> — very high resistance in reverse direction; very low resistance forward</li>
+        <li><span class="hb">LDR</span> — resistance DECREASES as light intensity INCREASES (in a sensor circuit)</li>
+        <li><span class="hb">Thermistor</span> — resistance DECREASES as temperature INCREASES</li>
+        <li>Ammeter in series; Voltmeter in parallel across component</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- I-V CHARACTERISTICS -->
+  <div class="subsec">I-V Characteristics</div>
+  <div class="dbox">
+    <svg viewBox="0 0 580 175" xmlns="http://www.w3.org/2000/svg" style="max-width:580px;width:100%">
+      <!-- OHMIC RESISTOR -->
+      <text x="90" y="12" text-anchor="middle" fill="#76ff03" font-size="12" font-weight="bold">Ohmic Resistor</text>
+      <line x1="15" y1="90" x2="170" y2="90" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="90" y1="10" x2="90" y2="165" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="168" y="87" fill="#5a6a85" font-size="10">V</text>
+      <text x="93" y="14" fill="#5a6a85" font-size="10">I</text>
+      <line x1="20" y1="160" x2="160" y2="20" stroke="#76ff03" stroke-width="2.5"/>
+      <text x="90" y="174" text-anchor="middle" fill="#5a6a85" font-size="10">Straight line through origin</text>
+      <!-- FILAMENT BULB -->
+      <text x="290" y="12" text-anchor="middle" fill="#ff7043" font-size="12" font-weight="bold">Filament Bulb</text>
+      <line x1="215" y1="90" x2="370" y2="90" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="290" y1="10" x2="290" y2="165" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="368" y="87" fill="#5a6a85" font-size="10">V</text>
+      <text x="293" y="14" fill="#5a6a85" font-size="10">I</text>
+      <!-- S-curve: flattens at higher V -->
+      <path d="M 220 155 Q 250 152 270 130 T 310 95 T 360 82" stroke="#ff7043" fill="none" stroke-width="2.5"/>
+      <path d="M 360 98 Q 340 110 310 128 T 270 152 T 220 155" stroke="#ff7043" fill="none" stroke-width="2.5"/>
+      <text x="290" y="174" text-anchor="middle" fill="#5a6a85" font-size="10">Curve — resistance ↑ as temp ↑</text>
+      <!-- DIODE -->
+      <text x="490" y="12" text-anchor="middle" fill="#e040fb" font-size="12" font-weight="bold">Diode</text>
+      <line x1="415" y1="90" x2="570" y2="90" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="490" y1="10" x2="490" y2="165" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="568" y="87" fill="#5a6a85" font-size="10">V</text>
+      <text x="493" y="14" fill="#5a6a85" font-size="10">I</text>
+      <!-- flat reverse bias -->
+      <line x1="420" y1="90" x2="500" y2="90" stroke="#e040fb" stroke-width="2.5"/>
+      <!-- threshold ~0.6V then steep upward -->
+      <path d="M 500 90 L 510 89 L 520 82 L 530 60 L 540 32" stroke="#e040fb" fill="none" stroke-width="2.5"/>
+      <text x="510" y="108" fill="#e040fb" font-size="9">~0.7V</text>
+      <line x1="510" y1="90" x2="510" y2="165" stroke="#e040fb" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+      <text x="490" y="174" text-anchor="middle" fill="#5a6a85" font-size="10">Only conducts forward; threshold ≈ 0.7V</text>
+    </svg>
+    <figcaption>I-V characteristic graphs — shape reveals behaviour of the component</figcaption>
+  </div>
+
+  <!-- DOMESTIC ELECTRICITY -->
+  <div class="subsec">2.3 Domestic Electricity &amp; Safety</div>
+  <div class="g2">
+    <div class="dbox" style="margin:0">
+      <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="max-width:320px;width:100%">
+        <text x="160" y="16" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">AC vs DC OSCILLOSCOPE TRACES</text>
+        <!-- AC trace -->
+        <text x="80" y="35" text-anchor="middle" fill="#00e5ff" font-size="11">AC (Mains)</text>
+        <line x1="10" y1="80" x2="155" y2="80" stroke="#5a6a85" stroke-width="1"/>
+        <line x1="10" y1="40" x2="10" y2="115" stroke="#5a6a85" stroke-width="1"/>
+        <path d="M 10 80 Q 25 40 45 80 Q 65 120 85 80 Q 105 40 125 80 Q 145 120 155 80" fill="none" stroke="#00e5ff" stroke-width="2"/>
+        <text x="80" y="130" text-anchor="middle" fill="#5a6a85" font-size="10">Alternating — reverses direction</text>
+        <text x="80" y="142" text-anchor="middle" fill="#00e5ff" font-size="10">UK: 230V RMS, 50 Hz</text>
+        <!-- DC trace -->
+        <text x="250" y="35" text-anchor="middle" fill="#76ff03" font-size="11">DC (Battery)</text>
+        <line x1="175" y1="80" x2="315" y2="80" stroke="#5a6a85" stroke-width="1"/>
+        <line x1="175" y1="40" x2="175" y2="115" stroke="#5a6a85" stroke-width="1"/>
+        <line x1="175" y1="62" x2="315" y2="62" stroke="#76ff03" stroke-width="2"/>
+        <text x="250" y="130" text-anchor="middle" fill="#5a6a85" font-size="10">Direct — constant one direction</text>
+        <text x="250" y="142" text-anchor="middle" fill="#76ff03" font-size="10">e.g. 1.5V battery</text>
+        <!-- Peak vs RMS note -->
+        <text x="160" y="165" text-anchor="middle" fill="#ffd740" font-size="10">AC: Peak voltage ≈ 325V, RMS = 230V</text>
+        <text x="160" y="178" text-anchor="middle" fill="#5a6a85" font-size="9">RMS is the equivalent DC voltage for same power</text>
+      </svg>
+      <figcaption>AC (alternating) vs DC (direct) oscilloscope traces</figcaption>
+    </div>
+    <div class="dbox" style="margin:0">
+      <svg viewBox="0 0 310 200" xmlns="http://www.w3.org/2000/svg" style="max-width:310px;width:100%">
+        <text x="155" y="16" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">3-PIN PLUG</text>
+        <!-- Plug body -->
+        <rect x="50" y="28" width="215" height="140" rx="10" fill="var(--surf)" stroke="#00e5ff" stroke-width="2"/>
+        <!-- Earth pin (top centre, longer) -->
+        <rect x="130" y="18" width="55" height="26" rx="4" fill="#76ff03"/>
+        <text x="157" y="34" text-anchor="middle" fill="#000" font-size="10" font-weight="bold">EARTH</text>
+        <!-- Neutral pin (bottom left) -->
+        <rect x="58" y="148" width="55" height="22" rx="4" fill="#5a6a85"/>
+        <text x="85" y="162" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">NEUTRAL</text>
+        <!-- Live pin (bottom right) -->
+        <rect x="200" y="148" width="55" height="22" rx="4" fill="#ff7043"/>
+        <text x="227" y="162" text-anchor="middle" fill="#000" font-size="10" font-weight="bold">LIVE</text>
+        <!-- Fuse in middle -->
+        <rect x="115" y="92" width="85" height="20" rx="4" fill="#ffd740" opacity=".9"/>
+        <text x="157" y="106" text-anchor="middle" fill="#000" font-size="11" font-weight="bold">FUSE</text>
+        <!-- Wire colour labels -->
+        <text x="157" y="50" text-anchor="middle" fill="#76ff03" font-size="10">Green/Yellow → Earth pin</text>
+        <text x="157" y="70" text-anchor="middle" fill="#5a6a85" font-size="10">Blue → Neutral pin (left)</text>
+        <text x="157" y="83" text-anchor="middle" fill="#ff7043" font-size="10">Brown → Live pin (right)</text>
+        <text x="157" y="128" text-anchor="middle" fill="#ffd740" font-size="10">Fuse ALWAYS in LIVE wire</text>
+        <text x="157" y="145" text-anchor="middle" fill="#5a6a85" font-size="9">Earth = safety; Neutral = 0V; Live = 230V</text>
+      </svg>
+      <figcaption>3-pin plug — wire colours and function</figcaption>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>How Safety Devices Work</h3>
+    <div class="g3">
+      <div style="background:var(--surf2);padding:14px;">
+        <strong style="color:#ffd740">FUSE</strong>
+        <div class="steps" style="margin-top:8px">
+          <div class="step"><div class="step-n">1</div><div class="step-text">Current rises above rated value</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-text">Thin wire inside heats up and <strong>melts</strong></div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-text">Circuit is <strong>broken</strong> — current stops</div></div>
+          <div class="step"><div class="step-n">4</div><div class="step-text">Device is protected from damage</div></div>
+        </div>
+      </div>
+      <div style="background:var(--surf2);padding:14px;">
+        <strong style="color:#76ff03">EARTH WIRE</strong>
+        <div class="steps" style="margin-top:8px">
+          <div class="step"><div class="step-n">1</div><div class="step-text">Live wire touches metal casing (fault)</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-text">Large current flows through earth wire to ground</div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-text">This blows the fuse in the live wire</div></div>
+          <div class="step"><div class="step-n">4</div><div class="step-text">Casing no longer at dangerous voltage</div></div>
+        </div>
+      </div>
+      <div style="background:var(--surf2);padding:14px;">
+        <strong style="color:#e040fb">RCD (Circuit Breaker)</strong>
+        <div class="steps" style="margin-top:8px">
+          <div class="step"><div class="step-n">1</div><div class="step-text">Monitors current in live and neutral wires</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-text">Detects any <em>difference</em> in current (imbalance)</div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-text">Trips electromagnet switch → circuit breaks instantly</div></div>
+          <div class="step"><div class="step-n">4</div><div class="step-text">Much faster than fuse; can be reset</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="warn"><strong>⚠ EXAM TRAP:</strong> Plastic (insulating) appliances like hairdryers with all-plastic cases do NOT need an earth wire — they are "double insulated". Only metal-cased devices need earth.</div>
+
+  <!-- NATIONAL GRID (Triple Only) -->
+  <div class="subsec">2.4 The National Grid <span class="trptag">Triple Only</span></div>
+  <div class="dbox">
+    <svg viewBox="0 0 620 160" xmlns="http://www.w3.org/2000/svg" style="max-width:620px;width:100%">
+      <!-- Power station -->
+      <rect x="5" y="45" width="90" height="70" rx="4" fill="var(--surf)" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="50" y="76" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">POWER</text>
+      <text x="50" y="91" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">STATION</text>
+      <text x="50" y="107" text-anchor="middle" fill="#5a6a85" font-size="9">25,000 V AC</text>
+      <!-- Step-up transformer -->
+      <rect x="120" y="35" width="90" height="90" rx="4" fill="var(--surf)" stroke="#69f0ae" stroke-width="2"/>
+      <text x="165" y="74" text-anchor="middle" fill="#69f0ae" font-size="11" font-weight="bold">STEP-UP</text>
+      <text x="165" y="89" text-anchor="middle" fill="#69f0ae" font-size="11" font-weight="bold">TRANSFORMER</text>
+      <text x="165" y="106" text-anchor="middle" fill="#69f0ae" font-size="9">↑ Voltage to 400,000V</text>
+      <text x="165" y="118" text-anchor="middle" fill="#69f0ae" font-size="9">↓ Current very low</text>
+      <!-- Power line -->
+      <line x1="210" y1="80" x2="400" y2="80" stroke="#ffd740" stroke-width="2.5"/>
+      <text x="305" y="68" text-anchor="middle" fill="#ffd740" font-size="11" font-weight="bold">HIGH VOLTAGE CABLES</text>
+      <text x="305" y="98" text-anchor="middle" fill="#5a6a85" font-size="9">~400,000 V — very low current — less P=I²R loss</text>
+      <!-- Pylon symbols -->
+      <polygon points="270,60 264,80 276,80" fill="none" stroke="#5a6a85" stroke-width="1"/>
+      <polygon points="340,60 334,80 346,80" fill="none" stroke="#5a6a85" stroke-width="1"/>
+      <!-- Step-down transformer -->
+      <rect x="400" y="35" width="90" height="90" rx="4" fill="var(--surf)" stroke="#69f0ae" stroke-width="2"/>
+      <text x="445" y="74" text-anchor="middle" fill="#69f0ae" font-size="11" font-weight="bold">STEP-DOWN</text>
+      <text x="445" y="89" text-anchor="middle" fill="#69f0ae" font-size="11" font-weight="bold">TRANSFORMER</text>
+      <text x="445" y="106" text-anchor="middle" fill="#69f0ae" font-size="9">↓ Voltage to 230V</text>
+      <text x="445" y="118" text-anchor="middle" fill="#69f0ae" font-size="9">↑ Current usable</text>
+      <!-- Consumer -->
+      <rect x="515" y="45" width="100" height="70" rx="4" fill="var(--surf)" stroke="#00e5ff" stroke-width="1.5"/>
+      <text x="565" y="75" text-anchor="middle" fill="#00e5ff" font-size="11" font-weight="bold">HOMES &amp;</text>
+      <text x="565" y="90" text-anchor="middle" fill="#00e5ff" font-size="11" font-weight="bold">INDUSTRY</text>
+      <text x="565" y="107" text-anchor="middle" fill="#00e5ff" font-size="9">230 V AC</text>
+      <!-- Arrows between blocks -->
+      <text x="108" y="84" fill="#5a6a85" font-size="14">→</text>
+      <text x="505" y="84" fill="#5a6a85" font-size="14">→</text>
+      <!-- Why high V label -->
+      <rect x="220" y="110" width="195" height="40" rx="4" fill="rgba(105,240,174,.1)" stroke="#69f0ae" stroke-width="1"/>
+      <text x="317" y="128" text-anchor="middle" fill="#69f0ae" font-size="11" font-weight="bold">WHY HIGH VOLTAGE?</text>
+      <text x="317" y="143" text-anchor="middle" fill="#69f0ae" font-size="10">P = I²R → low I = much less heat loss</text>
+    </svg>
+    <figcaption>National Grid — step-up raises voltage for efficient transmission; step-down reduces for safe use</figcaption>
+  </div>
+
+  <div class="card">
+    <h3>Transformer Equations <span class="htag">Higher</span> <span class="trptag">Triple</span></h3>
+    <div class="fgrid">
+      <div class="f trip"><div class="fn">Turns ratio</div><div class="fe">Vp/Vs = np/ns</div><div class="fu">p=primary, s=secondary</div></div>
+      <div class="f trip"><div class="fn">Power (ideal)</div><div class="fe">Vp × Ip = Vs × Is</div><div class="fu">100% efficiency assumption</div></div>
+    </div>
+    <p style="font-size:14px;color:#c5cedc;margin-top:10px">Step-up: more turns on secondary → higher voltage, lower current.<br>Step-down: fewer turns on secondary → lower voltage, higher current.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TOPIC 3 — PARTICLE MODEL
+════════════════════════════════════════════ -->
+<div id="particle" class="sec t3">
+  <div class="sec-head">
+    <span class="tnum">Topic 3</span>
+    <h2>Particle Model of Matter</h2>
+  </div>
+
+  <!-- States of Matter -->
+  <div class="subsec">3.1 States of Matter</div>
+  <div class="dbox">
+    <svg viewBox="0 0 580 175" xmlns="http://www.w3.org/2000/svg" style="max-width:580px;width:100%">
+      <!-- SOLID -->
+      <rect x="5" y="25" width="175" height="115" rx="5" fill="var(--surf)" stroke="#76ff03" stroke-width="2"/>
+      <text x="92" y="18" text-anchor="middle" fill="#76ff03" font-size="13" font-weight="bold">SOLID</text>
+      <!-- Regular grid of particles -->
+      <g fill="#76ff03" opacity=".85">
+        <circle cx="35" cy="50" r="12"/><circle cx="65" cy="50" r="12"/><circle cx="95" cy="50" r="12"/><circle cx="125" cy="50" r="12"/><circle cx="155" cy="50" r="12"/>
+        <circle cx="35" cy="82" r="12"/><circle cx="65" cy="82" r="12"/><circle cx="95" cy="82" r="12"/><circle cx="125" cy="82" r="12"/><circle cx="155" cy="82" r="12"/>
+        <circle cx="35" cy="114" r="12"/><circle cx="65" cy="114" r="12"/><circle cx="95" cy="114" r="12"/><circle cx="125" cy="114" r="12"/><circle cx="155" cy="114" r="12"/>
+      </g>
+      <!-- vibration arrows -->
+      <text x="35" y="56" text-anchor="middle" fill="#000" font-size="9" font-weight="bold">↕</text>
+      <text x="92" y="160" text-anchor="middle" fill="#5a6a85" font-size="10">Regular, close, vibrate in place</text>
+      <!-- LIQUID -->
+      <rect x="203" y="25" width="175" height="115" rx="5" fill="var(--surf)" stroke="#00e5ff" stroke-width="2"/>
+      <text x="290" y="18" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">LIQUID</text>
+      <g fill="#00e5ff" opacity=".8">
+        <circle cx="228" cy="46" r="12"/><circle cx="258" cy="53" r="12"/><circle cx="290" cy="46" r="12"/><circle cx="322" cy="50" r="12"/><circle cx="350" cy="44" r="12"/>
+        <circle cx="232" cy="80" r="12"/><circle cx="265" cy="84" r="12"/><circle cx="298" cy="79" r="12"/><circle cx="330" cy="84" r="12"/>
+        <circle cx="228" cy="114" r="12"/><circle cx="262" cy="110" r="12"/><circle cx="296" cy="115" r="12"/><circle cx="330" cy="110" r="12"/>
+      </g>
+      <text x="290" y="160" text-anchor="middle" fill="#5a6a85" font-size="10">Close, random, flow freely</text>
+      <!-- GAS -->
+      <rect x="401" y="25" width="175" height="115" rx="5" fill="var(--surf)" stroke="#e040fb" stroke-width="2"/>
+      <text x="488" y="18" text-anchor="middle" fill="#e040fb" font-size="13" font-weight="bold">GAS</text>
+      <g fill="#e040fb" opacity=".75">
+        <circle cx="425" cy="42" r="12"/><circle cx="560" cy="40" r="12"/>
+        <circle cx="490" cy="72" r="12"/><circle cx="540" cy="90" r="12"/>
+        <circle cx="415" cy="105" r="12"/><circle cx="558" cy="115" r="12"/>
+        <circle cx="462" cy="50" r="12"/><circle cx="420" cy="75" r="12"/>
+      </g>
+      <text x="488" y="160" text-anchor="middle" fill="#5a6a85" font-size="10">Far apart, random, fast, fill container</text>
+    </svg>
+    <figcaption>Particle arrangements in the three states of matter</figcaption>
+  </div>
+
+  <!-- Changes of State -->
+  <div class="subsec">Changes of State</div>
+  <div class="dbox">
+    <svg viewBox="0 0 560 130" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%">
+      <!-- State boxes -->
+      <rect x="10" y="35" width="100" height="55" rx="5" fill="#76ff0320" stroke="#76ff03" stroke-width="2"/>
+      <text x="60" y="67" text-anchor="middle" fill="#76ff03" font-size="14" font-weight="bold">SOLID</text>
+      <rect x="230" y="35" width="100" height="55" rx="5" fill="#00e5ff20" stroke="#00e5ff" stroke-width="2"/>
+      <text x="280" y="67" text-anchor="middle" fill="#00e5ff" font-size="14" font-weight="bold">LIQUID</text>
+      <rect x="450" y="35" width="100" height="55" rx="5" fill="#e040fb20" stroke="#e040fb" stroke-width="2"/>
+      <text x="500" y="67" text-anchor="middle" fill="#e040fb" font-size="14" font-weight="bold">GAS</text>
+      <!-- Top arrows: heating -->
+      <defs>
+        <marker id="aro" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5z" fill="#ff7043"/></marker>
+        <marker id="arb" markerWidth="7" markerHeight="7" refX="2" refY="3.5" orient="auto"><path d="M7,0 L7,7 L0,3.5z" fill="#00e5ff"/></marker>
+      </defs>
+      <line x1="112" y1="53" x2="228" y2="53" stroke="#ff7043" stroke-width="2" marker-end="url(#aro)"/>
+      <text x="170" y="47" text-anchor="middle" fill="#ff7043" font-size="11" font-weight="bold">Melt/Fuse</text>
+      <line x1="332" y1="53" x2="448" y2="53" stroke="#ff7043" stroke-width="2" marker-end="url(#aro)"/>
+      <text x="390" y="47" text-anchor="middle" fill="#ff7043" font-size="11" font-weight="bold">Evaporate/Boil</text>
+      <!-- Bottom arrows: cooling -->
+      <line x1="228" y1="72" x2="112" y2="72" stroke="#00e5ff" stroke-width="2" marker-end="url(#arb)"/>
+      <text x="170" y="90" text-anchor="middle" fill="#00e5ff" font-size="11">Freeze/Solidify</text>
+      <line x1="448" y1="72" x2="332" y2="72" stroke="#00e5ff" stroke-width="2" marker-end="url(#arb)"/>
+      <text x="390" y="90" text-anchor="middle" fill="#00e5ff" font-size="11">Condense</text>
+      <!-- Sublimation curve -->
+      <path d="M 60 35 Q 280 0 500 35" stroke="#ffd740" stroke-width="1.5" fill="none" stroke-dasharray="6,4"/>
+      <text x="280" y="10" text-anchor="middle" fill="#ffd740" font-size="10">Sublimation (solid → gas directly e.g. dry ice)</text>
+      <!-- Heat absorption note -->
+      <text x="280" y="120" text-anchor="middle" fill="#ff7043" font-size="11">↑ Heating = energy absorbed (endothermic)</text>
+    </svg>
+    <figcaption>During a change of state, temperature stays CONSTANT — energy breaks/forms bonds</figcaption>
+  </div>
+
+  <!-- Heating Curve -->
+  <div class="subsec">Heating Curve &amp; Latent Heat</div>
+  <div class="dbox">
+    <svg viewBox="0 0 520 210" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%">
+      <text x="260" y="16" text-anchor="middle" fill="#76ff03" font-size="13" font-weight="bold">HEATING CURVE — Temperature vs Time</text>
+      <line x1="45" y1="175" x2="500" y2="175" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="45" y1="175" x2="45" y2="20" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="502" y="178" fill="#5a6a85" font-size="11">Time</text>
+      <text x="15" y="100" fill="#5a6a85" font-size="11" transform="rotate(-90,15,100)">Temp</text>
+      <!-- Solid heating slope -->
+      <line x1="45" y1="165" x2="100" y2="130" stroke="#76ff03" stroke-width="2.5"/>
+      <!-- Flat melt section -->
+      <line x1="100" y1="130" x2="175" y2="130" stroke="#ff7043" stroke-width="3"/>
+      <!-- Liquid heating slope -->
+      <line x1="175" y1="130" x2="255" y2="80" stroke="#00e5ff" stroke-width="2.5"/>
+      <!-- Flat boil section -->
+      <line x1="255" y1="80" x2="370" y2="80" stroke="#ff7043" stroke-width="3"/>
+      <!-- Gas heating slope -->
+      <line x1="370" y1="80" x2="490" y2="35" stroke="#e040fb" stroke-width="2.5"/>
+      <!-- Horizontal dashed lines -->
+      <line x1="45" y1="130" x2="100" y2="130" stroke="#ffd740" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="38" y="133" text-anchor="end" fill="#ffd740" font-size="10">MP</text>
+      <line x1="45" y1="80" x2="255" y2="80" stroke="#ffd740" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="38" y="83" text-anchor="end" fill="#ffd740" font-size="10">BP</text>
+      <!-- Phase labels -->
+      <text x="72" y="158" fill="#76ff03" font-size="10">SOLID ↑</text>
+      <text x="137" y="125" fill="#ff7043" font-size="10" font-weight="bold">MELTING</text>
+      <text x="137" y="136" fill="#ff7043" font-size="9">(latent heat of fusion)</text>
+      <text x="215" y="112" fill="#00e5ff" font-size="10">LIQUID ↑</text>
+      <text x="312" y="70" fill="#ff7043" font-size="10" font-weight="bold">BOILING</text>
+      <text x="312" y="82" fill="#ff7043" font-size="9">(latent heat of vaporisation)</text>
+      <text x="432" y="60" fill="#e040fb" font-size="10">GAS ↑</text>
+      <!-- Key insight -->
+      <rect x="45" y="185" width="450" height="22" rx="3" fill="rgba(255,112,67,.1)" stroke="#ff7043" stroke-width="1"/>
+      <text x="270" y="200" text-anchor="middle" fill="#ff7043" font-size="11">Flat sections: temperature CONSTANT — energy breaks intermolecular bonds not increases KE</text>
+    </svg>
+    <figcaption>Heating curve — the two flat sections are where latent heat is absorbed</figcaption>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <h3>Key Formulas</h3>
+      <div class="fgrid">
+        <div class="f"><div class="fn">Density</div><div class="fe">ρ = m/V</div><div class="fu">ρ=kg/m³, m=kg, V=m³</div></div>
+        <div class="f"><div class="fn">Specific Latent Heat</div><div class="fe">E = mL</div><div class="fu">L=J/kg — given in exam</div></div>
+        <div class="f ht"><div class="fn">Boyle's Law ⭐</div><div class="fe">p₁V₁ = p₂V₂</div><div class="fu">Constant temperature</div></div>
+        <div class="f ht"><div class="fn">Pressure-Temp ⭐</div><div class="fe">p₁/T₁ = p₂/T₂</div><div class="fu">T MUST be in Kelvin</div></div>
+        <div class="f ht"><div class="fn">Kelvin Conversion ⭐</div><div class="fe">T(K) = T(°C)+273</div><div class="fu">Abs. zero = 0 K = −273°C</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Key Facts — Particle Model</h3>
+      <ul class="fl">
+        <li><span class="hg">Latent heat of fusion</span> = energy to melt solid (at constant temperature)</li>
+        <li><span class="hg">Latent heat of vaporisation</span> = energy to boil liquid — LARGER than fusion (more bonds to break)</li>
+        <li>Temperature is proportional to <strong>mean kinetic energy</strong> of particles</li>
+        <li>Absolute zero (0 K) = minimum possible temperature; particles have minimum KE</li>
+        <li>Gas pressure is caused by particles <strong>colliding with container walls</strong></li>
+        <li>↑ Temperature → particles faster → harder and more frequent collisions → ↑ pressure</li>
+        <li>↓ Volume → particles hit walls more often → ↑ pressure (same temp)</li>
+        <li>Density of water = 1000 kg/m³; density of ice ≈ 917 kg/m³ (less dense than water — unusual!)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Boyle's Law Graph (HT) -->
+  <div class="ht-box"><strong>⭐ HIGHER ONLY — Gas Law Graphs:</strong> A pV = constant graph is a hyperbola (p vs V). A p vs T (Kelvin) graph is a straight line through the origin when volume is constant. If the line is extrapolated back to p=0, it hits the x-axis at absolute zero (0 K / −273°C).</div>
+  <div class="dbox">
+    <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%">
+      <text x="130" y="16" text-anchor="middle" fill="#ffd740" font-size="12" font-weight="bold">Boyle's Law (p vs V)</text>
+      <line x1="20" y1="140" x2="240" y2="140" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="20" y1="140" x2="20" y2="20" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="241" y="143" fill="#5a6a85" font-size="10">V →</text>
+      <text x="5" y="20" fill="#5a6a85" font-size="10">p</text>
+      <path d="M 22 25 Q 40 30 60 50 Q 90 80 130 110 Q 170 130 230 140" fill="none" stroke="#ffd740" stroke-width="2.5"/>
+      <text x="130" y="152" text-anchor="middle" fill="#5a6a85" font-size="10">Hyperbola — constant temp, p↑ as V↓</text>
+      <!-- Pressure-Temp graph -->
+      <text x="390" y="16" text-anchor="middle" fill="#ffd740" font-size="12" font-weight="bold">Pressure vs Temp (p vs T)</text>
+      <line x1="270" y1="140" x2="500" y2="140" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="310" y1="140" x2="310" y2="20" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="501" y="143" fill="#5a6a85" font-size="10">T(K)</text>
+      <text x="295" y="20" fill="#5a6a85" font-size="10">p</text>
+      <!-- Origin shifted — 0K is at 270 -->
+      <line x1="270" y1="148" x2="498" y2="28" stroke="#ffd740" stroke-width="2.5"/>
+      <!-- Show that extrapolation hits x at ~270 -->
+      <line x1="270" y1="148" x2="310" y2="148" stroke="#ffd740" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+      <text x="270" y="157" text-anchor="middle" fill="#ffd740" font-size="10">0K</text>
+      <text x="310" y="157" text-anchor="middle" fill="#5a6a85" font-size="10">273K</text>
+      <text x="390" y="152" text-anchor="middle" fill="#5a6a85" font-size="10">Straight line — extrapolates to 0K at p=0</text>
+    </svg>
+    <figcaption>Higher only — Boyle's Law (left) and Pressure-Temperature relationship (right, constant volume)</figcaption>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TOPIC 4 — ATOMIC STRUCTURE
+════════════════════════════════════════════ -->
+<div id="atomic" class="sec t4">
+  <div class="sec-head">
+    <span class="tnum">Topic 4</span>
+    <h2>Atomic Structure</h2>
+  </div>
+
+  <!-- 4.1 ATOM STRUCTURE -->
+  <div class="subsec">4.1 Structure of the Atom</div>
+  <div class="g2">
+    <div class="dbox" style="margin:0">
+      <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;width:100%">
+        <text x="150" y="16" text-anchor="middle" fill="#e040fb" font-size="13" font-weight="bold">ATOMIC STRUCTURE</text>
+        <!-- Outer electron shells -->
+        <circle cx="150" cy="130" r="100" fill="none" stroke="#e040fb" stroke-width="1" stroke-dasharray="4,3" opacity=".4"/>
+        <circle cx="150" cy="130" r="65" fill="none" stroke="#e040fb" stroke-width="1" stroke-dasharray="4,3" opacity=".3"/>
+        <!-- Nucleus -->
+        <circle cx="150" cy="130" r="24" fill="#e040fb" opacity=".2" stroke="#e040fb" stroke-width="2"/>
+        <text x="150" y="126" text-anchor="middle" fill="#e040fb" font-size="10" font-weight="bold">NUCLEUS</text>
+        <text x="150" y="140" text-anchor="middle" fill="#5a6a85" font-size="8">p⁺ + n</text>
+        <!-- Protons -->
+        <circle cx="142" cy="123" r="7" fill="#ff7043" opacity=".9"/>
+        <text x="142" y="126" text-anchor="middle" fill="#000" font-size="7" font-weight="bold">p⁺</text>
+        <circle cx="157" cy="135" r="7" fill="#ff7043" opacity=".9"/>
+        <text x="157" y="138" text-anchor="middle" fill="#000" font-size="7" font-weight="bold">p⁺</text>
+        <!-- Neutrons -->
+        <circle cx="155" cy="122" r="7" fill="#5a6a85" opacity=".9"/>
+        <text x="155" y="125" text-anchor="middle" fill="#fff" font-size="7" font-weight="bold">n</text>
+        <!-- Electrons on shells -->
+        <circle cx="150" cy="65" r="6" fill="#00e5ff"/>
+        <text x="162" y="62" fill="#00e5ff" font-size="9">e⁻</text>
+        <circle cx="208" cy="107" r="6" fill="#00e5ff"/>
+        <text x="218" y="104" fill="#00e5ff" font-size="9">e⁻</text>
+        <circle cx="150" cy="195" r="6" fill="#00e5ff" opacity=".7"/>
+        <circle cx="92" cy="107" r="6" fill="#00e5ff" opacity=".7"/>
+        <circle cx="80" cy="90" r="6" fill="#00e5ff" opacity=".5"/>
+        <circle cx="220" cy="160" r="6" fill="#00e5ff" opacity=".5"/>
+        <!-- Size annotations -->
+        <line x1="150" y1="130" x2="150" y2="65" stroke="#5a6a85" stroke-width="1" stroke-dasharray="2,2"/>
+        <text x="158" y="100" fill="#5a6a85" font-size="8">~10⁻¹⁰m</text>
+        <text x="158" y="108" fill="#5a6a85" font-size="8">(atom radius)</text>
+        <text x="175" y="130" fill="#5a6a85" font-size="8">nucleus &lt;10⁻¹⁴m</text>
+        <text x="175" y="140" fill="#5a6a85" font-size="8">(1/10,000 of atom)</text>
+      </svg>
+      <figcaption>Atom radius ≈ 10⁻¹⁰ m; nucleus radius &lt;10⁻¹⁴ m</figcaption>
+    </div>
+    <div class="card" style="margin:0">
+      <h3>Subatomic Particles</h3>
+      <table>
+        <thead><tr><th>Particle</th><th>Location</th><th>Charge</th><th>Relative Mass</th></tr></thead>
+        <tbody>
+          <tr><td style="color:#ff7043;font-weight:bold">Proton</td><td>Nucleus</td><td style="color:#ff7043">+1</td><td>1</td></tr>
+          <tr><td style="color:#5a6a85;font-weight:bold">Neutron</td><td>Nucleus</td><td>0</td><td>1</td></tr>
+          <tr><td style="color:#00e5ff;font-weight:bold">Electron</td><td>Shells around nucleus</td><td style="color:#00e5ff">−1</td><td>≈ 0 (1/1836)</td></tr>
+        </tbody>
+      </table>
+      <div style="background:var(--surf2);padding:14px;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:14px">
+        <div style="color:#e040fb;margin-bottom:6px"><strong>Nuclear Notation Example:</strong></div>
+        <div style="font-size:28px;color:#e2e8f0;line-height:1.3">
+          <sup style="color:#ff7043">238</sup><sub style="color:#00e5ff">92</sub>U
+        </div>
+        <div style="margin-top:8px;font-size:12px">
+          <div style="color:#ff7043">238 = Mass number (A) = protons + neutrons</div>
+          <div style="color:#00e5ff">92 = Atomic number (Z) = protons only</div>
+          <div style="color:#5a6a85">Neutrons = 238 − 92 = <strong style="color:#e040fb">146</strong></div>
+        </div>
+      </div>
+      <div class="tip" style="margin-top:10px"><strong>✓ Isotopes:</strong> Same element (same Z), different number of neutrons. E.g. C-12 and C-14 are both carbon but C-14 has 2 extra neutrons.</div>
+    </div>
+  </div>
+
+  <!-- ATOMIC MODEL HISTORY — TRIPLE ONLY -->
+  <div class="subsec">4.1.3 History of the Atomic Model <span class="trptag">Triple Physics</span></div>
+  <div class="card">
+    <h3>Development of the Atomic Model</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">~1803<br>DALTON</div>
+        <div class="tl-text"><strong>Solid Sphere Model</strong> — Atoms described as tiny, indivisible solid spheres. No internal structure. Elements differ in mass. This explained chemical reactions but had no explanation for electrical properties.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1897<br>THOMSON</div>
+        <div class="tl-text"><strong>Plum Pudding Model</strong> — Discovery of the electron. Thomson proposed a sphere of positive charge with electrons (negative "plums") embedded in it — like plums in a pudding. This explained why atoms were overall neutral.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1909–11<br>RUTHERFORD</div>
+        <div class="tl-text"><strong>Nuclear/Planetary Model</strong> — The famous <span class="hp">gold foil (alpha scattering) experiment</span> by Geiger and Marsden, directed by Rutherford. Most alpha particles passed straight through → atom is mostly empty space. A small number deflected at large angles (some bounced back) → a tiny, dense, positively charged nucleus exists. Disproved the plum pudding model.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1913<br>BOHR</div>
+        <div class="tl-text"><strong>Bohr's Model</strong> — Electrons orbit the nucleus in fixed <span class="hp">energy levels (shells)</span>. Electrons can jump to higher levels by absorbing energy (photons), and fall back down by emitting energy (light of specific wavelengths/colours). This explained atomic emission spectra.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1932<br>CHADWICK</div>
+        <div class="tl-text"><strong>Discovery of the Neutron</strong> — Explained why atomic masses were roughly double atomic numbers. Completed the nuclear model we use today: protons + neutrons in nucleus, electrons in shells.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUTHERFORD SCATTERING EXPERIMENT -->
+  <div class="subsec">Rutherford Scattering Experiment <span class="trptag">Triple</span></div>
+  <div class="dbox">
+    <svg viewBox="0 0 580 185" xmlns="http://www.w3.org/2000/svg" style="max-width:580px;width:100%">
+      <text x="290" y="16" text-anchor="middle" fill="#e040fb" font-size="13" font-weight="bold">GEIGER-MARSDEN GOLD FOIL EXPERIMENT</text>
+      <!-- Gold foil line -->
+      <line x1="290" y1="25" x2="290" y2="160" stroke="#ffd740" stroke-width="5" opacity=".5"/>
+      <text x="290" y="175" text-anchor="middle" fill="#ffd740" font-size="10">Gold foil</text>
+      <!-- Alpha source -->
+      <rect x="20" y="75" width="60" height="30" rx="4" fill="var(--surf)" stroke="#ff7043" stroke-width="1.5"/>
+      <text x="50" y="94" text-anchor="middle" fill="#ff7043" font-size="10" font-weight="bold">α source</text>
+      <!-- Most particles pass straight through -->
+      <line x1="82" y1="87" x2="320" y2="87" stroke="#ff7043" stroke-width="1.5"/>
+      <line x1="82" y1="94" x2="320" y2="94" stroke="#ff7043" stroke-width="1.5" opacity=".7"/>
+      <line x1="82" y1="80" x2="320" y2="80" stroke="#ff7043" stroke-width="1.5" opacity=".5"/>
+      <polygon points="318,85 330,87 318,90" fill="#ff7043"/>
+      <polygon points="318,91 330,94 318,97" fill="#ff7043" opacity=".7"/>
+      <text x="490" y="91" fill="#ff7043" font-size="11" font-weight="bold">Most pass through</text>
+      <text x="490" y="103" fill="#5a6a85" font-size="10">Atom is mostly empty space</text>
+      <!-- Small deflections -->
+      <path d="M 82 105 L 288 100 L 360 75" fill="none" stroke="#ffd740" stroke-width="1.5"/>
+      <polygon points="358,71 365,79 352,79" fill="#ffd740"/>
+      <text x="410" y="72" fill="#ffd740" font-size="10">Small deflections</text>
+      <!-- Large deflection / backscatter -->
+      <path d="M 82 113 L 287 110 L 210 55" fill="none" stroke="#e040fb" stroke-width="2"/>
+      <polygon points="207,51 213,63 201,60" fill="#e040fb"/>
+      <text x="80" y="45" fill="#e040fb" font-size="10">Backscattered!</text>
+      <text x="80" y="57" fill="#5a6a85" font-size="9">(~1 in 8000)</text>
+      <!-- Nucleus marker -->
+      <circle cx="290" cy="88" r="5" fill="#e040fb"/>
+      <text x="304" y="80" fill="#e040fb" font-size="9">Nucleus</text>
+    </svg>
+    <figcaption>Rutherford scattering — alpha particles fired at gold foil; results disproved the plum pudding model</figcaption>
+  </div>
+
+  <div class="card">
+    <h3>What the Results Proved</h3>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><div class="step-text"><strong>Most pass straight through</strong> → the atom is mostly empty space — disproves plum pudding</div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-text"><strong>Some deflected at small angles</strong> → a positive charge exists inside the atom that repels alpha (also positive)</div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-text"><strong>A very few bounced almost straight back</strong> → the positive charge is concentrated in a very small, very dense region = the nucleus (less than 1/10,000 of atom's size)</div></div>
+    </div>
+  </div>
+
+  <!-- RADIOACTIVE DECAY -->
+  <div class="subsec">4.2 Radioactive Decay &amp; Nuclear Radiation</div>
+
+  <div class="dbox">
+    <svg viewBox="0 0 620 175" xmlns="http://www.w3.org/2000/svg" style="max-width:620px;width:100%">
+      <text x="310" y="16" text-anchor="middle" fill="#e040fb" font-size="13" font-weight="bold">TYPES OF IONISING RADIATION</text>
+      <!-- Table structure -->
+      <!-- Headers -->
+      <text x="62" y="36" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">TYPE</text>
+      <text x="180" y="36" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">SYMBOL/MAKEUP</text>
+      <text x="298" y="36" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">CHARGE</text>
+      <text x="395" y="36" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">RANGE IN AIR</text>
+      <text x="520" y="36" text-anchor="middle" fill="#5a6a85" font-size="11" font-weight="bold">STOPPED BY</text>
+      <line x1="5" y1="40" x2="615" y2="40" stroke="#1c2538" stroke-width="1"/>
+      <!-- Alpha row -->
+      <text x="62" y="61" text-anchor="middle" fill="#ff7043" font-size="13" font-weight="bold">Alpha (α)</text>
+      <text x="180" y="61" text-anchor="middle" fill="#e2e8f0" font-size="11">⁴₂He nucleus (2p + 2n)</text>
+      <text x="298" y="61" text-anchor="middle" fill="#ff7043" font-size="12">+2</text>
+      <text x="395" y="61" text-anchor="middle" fill="#e2e8f0" font-size="11">~5 cm</text>
+      <text x="520" y="61" text-anchor="middle" fill="#e2e8f0" font-size="11">Paper / skin</text>
+      <!-- Paper strip symbol -->
+      <rect x="455" y="52" width="28" height="13" fill="#ffd740" opacity=".5"/>
+      <text x="469" y="62" text-anchor="middle" fill="#000" font-size="8">paper</text>
+      <line x1="5" y1="68" x2="615" y2="68" stroke="#1c2538" stroke-width="1"/>
+      <!-- Beta row -->
+      <text x="62" y="89" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="bold">Beta (β⁻)</text>
+      <text x="180" y="89" text-anchor="middle" fill="#e2e8f0" font-size="11">Fast electron (⁰₋₁e)</text>
+      <text x="298" y="89" text-anchor="middle" fill="#00e5ff" font-size="12">−1</text>
+      <text x="395" y="89" text-anchor="middle" fill="#e2e8f0" font-size="11">~1 metre</text>
+      <text x="520" y="89" text-anchor="middle" fill="#e2e8f0" font-size="11">3mm aluminium</text>
+      <rect x="468" y="81" width="38" height="13" fill="#5a6a85" opacity=".7"/>
+      <text x="487" y="91" text-anchor="middle" fill="#fff" font-size="8">aluminium</text>
+      <line x1="5" y1="96" x2="615" y2="96" stroke="#1c2538" stroke-width="1"/>
+      <!-- Gamma row -->
+      <text x="62" y="117" text-anchor="middle" fill="#76ff03" font-size="13" font-weight="bold">Gamma (γ)</text>
+      <text x="180" y="117" text-anchor="middle" fill="#e2e8f0" font-size="11">EM wave (high energy photon)</text>
+      <text x="298" y="117" text-anchor="middle" fill="#76ff03" font-size="12">0</text>
+      <text x="395" y="117" text-anchor="middle" fill="#e2e8f0" font-size="11">km / ∞</text>
+      <text x="520" y="117" text-anchor="middle" fill="#e2e8f0" font-size="11">cm of lead / concrete</text>
+      <rect x="455" y="108" width="44" height="13" fill="#5a6a85" opacity=".9"/>
+      <text x="477" y="118" text-anchor="middle" fill="#fff" font-size="8">thick lead</text>
+      <line x1="5" y1="124" x2="615" y2="124" stroke="#1c2538" stroke-width="1"/>
+      <!-- Neutron row (Triple) -->
+      <text x="62" y="148" text-anchor="middle" fill="#ffd740" font-size="12" font-weight="bold">Neutron (n) 🌿</text>
+      <text x="180" y="148" text-anchor="middle" fill="#e2e8f0" font-size="11">Free neutron</text>
+      <text x="298" y="148" text-anchor="middle" fill="#ffd740" font-size="12">0</text>
+      <text x="395" y="148" text-anchor="middle" fill="#e2e8f0" font-size="11">Variable</text>
+      <text x="520" y="148" text-anchor="middle" fill="#e2e8f0" font-size="11">Concrete / water</text>
+      <text x="310" y="168" text-anchor="middle" fill="#5a6a85" font-size="10">Ionising power: α > β > γ (but penetrating power: γ > β > α)</text>
+    </svg>
+    <figcaption>Properties of ionising radiation — higher ionising power = more dangerous inside body; higher penetration = more dangerous outside</figcaption>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <h3>Nuclear Equations — How to Write Them</h3>
+      <p style="font-size:13px;color:#94a3b8;margin-bottom:10px">Top numbers (mass) and bottom numbers (atomic) MUST balance on both sides.</p>
+      <div style="background:var(--surf2);padding:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:2.1">
+        <div style="color:#ff7043"><strong>α Alpha decay: A−4, Z−2</strong></div>
+        <div style="color:#e2e8f0">²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He</div>
+        <div style="color:#5a6a85;font-size:11px">Check: 238=234+4 ✓ &nbsp; 92=90+2 ✓</div>
+        <hr style="border-color:#1c2538;margin:8px 0">
+        <div style="color:#00e5ff"><strong>β⁻ Beta minus decay: A same, Z+1</strong></div>
+        <div style="color:#e2e8f0">¹⁴₆C → ¹⁴₇N + ⁰₋₁e</div>
+        <div style="color:#5a6a85;font-size:11px">Check: 14=14+0 ✓ &nbsp; 6=7+(−1) ✓</div>
+        <div style="color:#5a6a85;font-size:11px">Cause: neutron → proton + electron emitted</div>
+        <hr style="border-color:#1c2538;margin:8px 0">
+        <div style="color:#76ff03"><strong>γ Gamma: No change to A or Z</strong></div>
+        <div style="color:#e2e8f0">Nucleus just releases energy as EM wave</div>
+        <hr style="border-color:#1c2538;margin:8px 0">
+        <div style="color:#ffd740"><strong>β⁺ Beta plus ⭐ (HT only):</strong></div>
+        <div style="color:#e2e8f0">Proton → neutron + positron (⁰₊₁e)</div>
+        <div style="color:#5a6a85;font-size:11px">A same, Z−1</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Contamination vs Irradiation</h3>
+      <div style="background:var(--surf2);padding:14px;margin-bottom:12px;border-left:3px solid #ff7043">
+        <strong style="color:#ff7043">CONTAMINATION</strong>
+        <p style="font-size:13px;color:#c5cedc;margin-top:6px">Radioactive material <strong>gets onto or inside</strong> the body (skin, clothes, ingested, inhaled). The source stays with you — continuous dose. MORE dangerous because you cannot remove yourself from the source.</p>
+        <p style="font-size:12px;color:#5a6a85;margin-top:6px">Most harmful: <span class="ho">Alpha</span> — very highly ionising inside body tissue</p>
+      </div>
+      <div style="background:var(--surf2);padding:14px;border-left:3px solid #76ff03">
+        <strong style="color:#76ff03">IRRADIATION</strong>
+        <p style="font-size:13px;color:#c5cedc;margin-top:6px">Body is exposed to radiation from an <strong>external source</strong>. Source remains outside you — dose stops when you move away. LESS dangerous than contamination.</p>
+        <p style="font-size:12px;color:#5a6a85;margin-top:6px">Most harmful externally: <span class="hg">Gamma</span> — penetrates to internal organs</p>
+      </div>
+      <div class="tip" style="margin-top:10px"><strong>✓ Exam answer template:</strong> Always say WHICH type is more dangerous in WHICH scenario and WHY (ionising power / penetration).</div>
+    </div>
+  </div>
+
+  <!-- HALF LIFE -->
+  <div class="subsec">Half-Life</div>
+  <div class="dbox">
+    <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;width:100%">
+      <text x="280" y="16" text-anchor="middle" fill="#e040fb" font-size="13" font-weight="bold">HALF-LIFE DECAY GRAPH</text>
+      <line x1="50" y1="172" x2="530" y2="172" stroke="#5a6a85" stroke-width="1.5"/>
+      <line x1="50" y1="172" x2="50" y2="22" stroke="#5a6a85" stroke-width="1.5"/>
+      <text x="531" y="175" fill="#5a6a85" font-size="11">Time</text>
+      <text x="18" y="100" fill="#5a6a85" font-size="11" transform="rotate(-90,18,100)">Activity</text>
+      <!-- Decay curve -->
+      <path d="M 50,27 C 90,27 110,97 200,97 C 260,97 285,135 375,135 C 420,135 440,155 530,155" fill="none" stroke="#e040fb" stroke-width="2.5"/>
+      <!-- Half-life dashed lines -->
+      <line x1="50" y1="97" x2="200" y2="97" stroke="#ffd740" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="200" y1="97" x2="200" y2="172" stroke="#ffd740" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="50" y1="135" x2="375" y2="135" stroke="#ffd740" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="375" y1="135" x2="375" y2="172" stroke="#ffd740" stroke-width="1" stroke-dasharray="4,3"/>
+      <!-- Y axis labels -->
+      <text x="44" y="30" text-anchor="end" fill="#e2e8f0" font-size="11">N₀</text>
+      <text x="44" y="100" text-anchor="end" fill="#ffd740" font-size="11">N₀/2</text>
+      <text x="44" y="138" text-anchor="end" fill="#ffd740" font-size="11">N₀/4</text>
+      <text x="44" y="157" text-anchor="end" fill="#5a6a85" font-size="10">N₀/8</text>
+      <!-- X axis labels -->
+      <text x="50" y="185" text-anchor="middle" fill="#5a6a85" font-size="10">0</text>
+      <text x="200" y="185" text-anchor="middle" fill="#ffd740" font-size="11">t½</text>
+      <text x="375" y="185" text-anchor="middle" fill="#ffd740" font-size="11">2t½</text>
+      <text x="530" y="185" text-anchor="middle" fill="#5a6a85" font-size="10">3t½</text>
+      <!-- Double arrow showing one half-life -->
+      <line x1="52" y1="15" x2="198" y2="15" stroke="#ffd740" stroke-width="1.5" marker-start="url(#htab)" marker-end="url(#htaa)"/>
+      <text x="125" y="12" text-anchor="middle" fill="#ffd740" font-size="10">One half-life (t½)</text>
+      <defs>
+        <marker id="htaa" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#ffd740"/></marker>
+        <marker id="htab" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><path d="M6,0 L6,6 L0,3z" fill="#ffd740"/></marker>
+      </defs>
+    </svg>
+    <figcaption>After each half-life, activity halves (exponential decay). The shape of the curve never changes.</figcaption>
+  </div>
+
+  <div class="card">
+    <h3>Half-Life Key Facts &amp; Calculations</h3>
+    <div class="g2">
+      <div>
+        <ul class="fl">
+          <li><span class="hp">Half-life</span> = time for the count rate (activity) to halve, OR for half the unstable nuclei to decay</li>
+          <li>Radioactive decay is <strong>random</strong> and <strong>spontaneous</strong> — cannot be predicted or controlled</li>
+          <li>Activity measured in <span class="hp">Becquerels (Bq)</span> = number of decays per second</li>
+          <li>Count rate measured by Geiger-Müller tube (Geiger counter)</li>
+          <li>After n half-lives: N = N₀ × (½)ⁿ</li>
+          <li>Background radiation must be subtracted from readings!</li>
+        </ul>
+      </div>
+      <div>
+        <div style="background:var(--surf2);padding:14px;font-size:13px">
+          <strong style="color:#e040fb">WORKED EXAMPLE:</strong>
+          <p style="color:#c5cedc;margin-top:8px">Initial activity = 800 Bq. Half-life = 2 days. What is activity after 8 days?</p>
+          <p style="color:#5a6a85;margin-top:6px">8 days ÷ 2 days = <strong style="color:#ffd740">4 half-lives</strong></p>
+          <p style="color:#5a6a85">800 → 400 → 200 → 100 → <strong style="color:#e040fb">50 Bq</strong></p>
+          <p style="color:#5a6a85">OR: 800 × (½)⁴ = 800 × 1/16 = 50 Bq ✓</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND RADIATION -->
+  <div class="subsec">Background Radiation</div>
+  <div class="card">
+    <h3>Sources of Background Radiation</h3>
+    <div class="g3">
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">🪨</div>
+        <strong style="color:#ff7043">Radon Gas</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">~50% of background radiation in UK. Emitted naturally from granite rocks. Builds up in poorly-ventilated buildings.</p>
+      </div>
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">🌌</div>
+        <strong style="color:#00e5ff">Cosmic Rays</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">~13% — high-energy particles from space. More exposure at altitude (pilots, frequent flyers).</p>
+      </div>
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">🏥</div>
+        <strong style="color:#76ff03">Medical</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">~15% — X-rays, gamma-ray cancer treatment, medical tracers (e.g. Tc-99m). Artificial source.</p>
+      </div>
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">🥩</div>
+        <strong style="color:#ffd740">Food &amp; Drink</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">~12% — small amounts of radioactive isotopes (e.g. K-40, C-14) naturally present in food and water.</p>
+      </div>
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">🌋</div>
+        <strong style="color:#e040fb">Ground/Buildings</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">~10% — gamma radiation from naturally radioactive materials in rocks and soil.</p>
+      </div>
+      <div style="background:var(--surf2);padding:12px;text-align:center">
+        <div style="font-size:28px">☢️</div>
+        <strong style="color:#69f0ae">Nuclear Industry</strong>
+        <p style="font-size:12px;color:#5a6a85;margin-top:4px">&lt;1% — nuclear power stations and weapons testing fallout contribute very little to average dose.</p>
+      </div>
+    </div>
+    <div class="warn" style="margin-top:14px"><strong>⚠ EXAM TRAP:</strong> Always subtract background radiation count rate from measured count rate before calculations. This is called the "corrected count rate".</div>
+  </div>
+
+  <!-- USES OF RADIATION -->
+  <div class="card" style="margin-top:16px">
+    <h3>Uses of Radioactive Emissions</h3>
+    <table>
+      <thead><tr><th>Type</th><th>Use</th><th>Why this type?</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#ff7043;font-weight:bold">Alpha</td><td>Smoke detectors</td><td>Ionises air between plates → small current flows. Smoke absorbs alpha → current drops → alarm triggers</td></tr>
+        <tr><td style="color:#00e5ff;font-weight:bold">Beta</td><td>Thickness monitoring (paper/aluminium mills)</td><td>Beta is partially absorbed by the material. Detector reads less → material too thick → rollers adjust</td></tr>
+        <tr><td style="color:#76ff03;font-weight:bold">Gamma</td><td>Sterilising medical equipment</td><td>Penetrates packaging and kills bacteria without opening the packaging</td></tr>
+        <tr><td style="color:#76ff03;font-weight:bold">Gamma</td><td>Cancer radiotherapy</td><td>Targeted gamma beam destroys tumour cells (focused from multiple directions to maximise dose at tumour)</td></tr>
+        <tr><td style="color:#76ff03;font-weight:bold">Gamma</td><td>Medical tracers (e.g. Tc-99m)</td><td>Injected or swallowed; gamma detected outside body using gamma camera to image organs</td></tr>
+        <tr><td style="color:#76ff03;font-weight:bold">Gamma/Beta</td><td>Carbon dating (C-14)</td><td>C-14 decays at known rate; comparing C-14/C-12 ratio gives age of organic material</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NUCLEAR FISSION & FUSION -->
+  <div class="subsec">4.4 Nuclear Fission &amp; Fusion <span class="trptag">Triple Physics</span></div>
+  <div class="g2">
+    <div class="dbox" style="margin:0">
+      <svg viewBox="0 0 310 195" xmlns="http://www.w3.org/2000/svg" style="max-width:310px;width:100%">
+        <text x="155" y="16" text-anchor="middle" fill="#69f0ae" font-size="13" font-weight="bold">NUCLEAR FISSION</text>
+        <!-- Neutron in -->
+        <circle cx="20" cy="95" r="8" fill="#5a6a85"/>
+        <text x="20" y="99" text-anchor="middle" fill="#fff" font-size="7">n</text>
+        <line x1="30" y1="95" x2="55" y2="95" stroke="#5a6a85" stroke-width="1.5"/>
+        <!-- Large nucleus (U-235) -->
+        <ellipse cx="80" cy="95" rx="25" ry="23" fill="#e040fb" opacity=".3" stroke="#e040fb" stroke-width="2"/>
+        <text x="80" y="91" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="bold">U-235</text>
+        <text x="80" y="103" text-anchor="middle" fill="#e040fb" font-size="9">(unstable)</text>
+        <!-- Arrow -->
+        <text x="122" y="100" text-anchor="middle" fill="#ff7043" font-size="20">→</text>
+        <!-- Energy release label -->
+        <text x="122" y="86" text-anchor="middle" fill="#ffd740" font-size="10" font-weight="bold">ENERGY</text>
+        <text x="122" y="77" text-anchor="middle" fill="#ffd740" font-size="9">released!</text>
+        <!-- Daughter nuclei -->
+        <circle cx="165" cy="78" r="16" fill="#76ff03" opacity=".4" stroke="#76ff03" stroke-width="1.5"/>
+        <text x="165" y="82" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">Kr-92</text>
+        <circle cx="165" cy="115" r="16" fill="#00e5ff" opacity=".4" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="165" y="119" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">Ba-141</text>
+        <!-- New neutrons flying out -->
+        <line x1="182" y1="72" x2="218" y2="55" stroke="#5a6a85" stroke-width="1.5"/>
+        <circle cx="225" cy="51" r="7" fill="#5a6a85"/><text x="225" y="55" text-anchor="middle" fill="#fff" font-size="7">n</text>
+        <line x1="183" y1="78" x2="218" y2="78" stroke="#5a6a85" stroke-width="1.5"/>
+        <circle cx="225" cy="78" r="7" fill="#5a6a85"/><text x="225" y="82" text-anchor="middle" fill="#fff" font-size="7">n</text>
+        <line x1="183" y1="120" x2="218" y2="135" stroke="#5a6a85" stroke-width="1.5"/>
+        <circle cx="225" cy="139" r="7" fill="#5a6a85"/><text x="225" y="143" text-anchor="middle" fill="#fff" font-size="7">n</text>
+        <!-- Chain reaction label -->
+        <text x="250" y="65" fill="#69f0ae" font-size="10" font-weight="bold">Chain</text>
+        <text x="250" y="78" fill="#69f0ae" font-size="10" font-weight="bold">Reaction!</text>
+        <text x="250" y="95" fill="#5a6a85" font-size="9">Each fission</text>
+        <text x="250" y="107" fill="#5a6a85" font-size="9">releases 2-3</text>
+        <text x="250" y="119" fill="#5a6a85" font-size="9">more neutrons</text>
+        <!-- Summary -->
+        <text x="155" y="162" text-anchor="middle" fill="#69f0ae" font-size="11">Large nucleus + neutron → splits</text>
+        <text x="155" y="176" text-anchor="middle" fill="#5a6a85" font-size="10">Two smaller nuclei + neutrons + ENERGY</text>
+        <text x="155" y="190" text-anchor="middle" fill="#5a6a85" font-size="10">Used in: nuclear reactors, nuclear bombs</text>
+      </svg>
+      <figcaption>Nuclear fission chain reaction — used in power stations</figcaption>
+    </div>
+    <div class="dbox" style="margin:0">
+      <svg viewBox="0 0 310 195" xmlns="http://www.w3.org/2000/svg" style="max-width:310px;width:100%">
+        <text x="155" y="16" text-anchor="middle" fill="#ffd740" font-size="13" font-weight="bold">NUCLEAR FUSION</text>
+        <!-- Two small nuclei approaching -->
+        <circle cx="60" cy="95" r="20" fill="#00e5ff" opacity=".35" stroke="#00e5ff" stroke-width="2"/>
+        <text x="60" y="91" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">H-2</text>
+        <text x="60" y="103" text-anchor="middle" fill="#00e5ff" font-size="9">deuterium</text>
+        <!-- Approaching arrows -->
+        <line x1="82" y1="90" x2="102" y2="90" stroke="#ff7043" stroke-width="2" marker-end="url(#aro2)"/>
+        <line x1="228" y1="100" x2="208" y2="100" stroke="#ff7043" stroke-width="2" marker-end="url(#aro3)"/>
+        <defs>
+          <marker id="aro2" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5z" fill="#ff7043"/></marker>
+          <marker id="aro3" markerWidth="7" markerHeight="7" refX="2" refY="3.5" orient="auto"><path d="M7,0 L7,7 L0,3.5z" fill="#ff7043"/></marker>
+        </defs>
+        <circle cx="242" cy="95" r="20" fill="#e040fb" opacity=".35" stroke="#e040fb" stroke-width="2"/>
+        <text x="242" y="91" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">H-3</text>
+        <text x="242" y="103" text-anchor="middle" fill="#e040fb" font-size="9">tritium</text>
+        <!-- Result -->
+        <text x="155" y="75" text-anchor="middle" fill="#ffd740" font-size="20">↓ FUSE ↓</text>
+        <!-- He-4 product -->
+        <circle cx="135" cy="135" r="20" fill="#76ff03" opacity=".35" stroke="#76ff03" stroke-width="2"/>
+        <text x="135" y="131" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="bold">He-4</text>
+        <text x="135" y="143" text-anchor="middle" fill="#5a6a85" font-size="9">helium</text>
+        <!-- Neutron out -->
+        <circle cx="190" cy="135" r="10" fill="#5a6a85"/>
+        <text x="190" y="139" text-anchor="middle" fill="#fff" font-size="8">n</text>
+        <!-- Energy arrows -->
+        <line x1="210" y1="130" x2="260" y2="120" stroke="#ffd740" stroke-width="2"/>
+        <text x="270" y="118" fill="#ffd740" font-size="10" font-weight="bold">HUGE</text>
+        <text x="270" y="130" fill="#ffd740" font-size="10" font-weight="bold">ENERGY</text>
+        <!-- Requirements -->
+        <text x="155" y="162" text-anchor="middle" fill="#ffd740" font-size="11">Small nuclei combine → larger nucleus</text>
+        <text x="155" y="176" text-anchor="middle" fill="#5a6a85" font-size="10">Needs: very high temperature &amp; pressure</text>
+        <text x="155" y="190" text-anchor="middle" fill="#5a6a85" font-size="10">Happens in: stars, hydrogen bombs</text>
+      </svg>
+      <figcaption>Nuclear fusion — hydrogen nuclei combine at extreme temperatures</figcaption>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Fission vs Fusion — Key Comparison</h3>
+    <table>
+      <thead><tr><th></th><th>Nuclear Fission</th><th>Nuclear Fusion</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#5a6a85">Process</td><td>Large nucleus SPLITS</td><td>Small nuclei JOIN</td></tr>
+        <tr><td style="color:#5a6a85">Fuel</td><td>Uranium-235, Plutonium-239</td><td>Hydrogen isotopes (deuterium + tritium)</td></tr>
+        <tr><td style="color:#5a6a85">Conditions</td><td>Just needs a neutron; happens at low temp</td><td>Needs extremely high temp (~10⁷ K) and pressure</td></tr>
+        <tr><td style="color:#5a6a85">Energy released</td><td>Large</td><td>Even larger per kg of fuel</td></tr>
+        <tr><td style="color:#5a6a85">Radioactive waste</td><td>Yes — serious long-term problem</td><td>Much less — neutron can make materials mildly radioactive</td></tr>
+        <tr><td style="color:#5a6a85">Current use</td><td>Nuclear power stations, nuclear weapons</td><td>Stars; experimental reactors (ITER project); H-bombs</td></tr>
+        <tr><td style="color:#5a6a85">Key challenge</td><td>Controlling chain reaction (control rods)</td><td>Achieving and containing the extreme conditions needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     REQUIRED PRACTICALS
+════════════════════════════════════════════ -->
+<div id="practicals" class="sec">
+  <div class="sec-head" style="border-color:#ffd740">
+    <span class="tnum" style="background:#ffd740;color:#000">REQUIRED</span>
+    <h2 style="color:#ffd740">Required Practicals</h2>
+  </div>
+  <p style="color:#c5cedc;margin-bottom:20px;font-size:14px">These practicals appear directly in the exam — know the method, variables, sources of error, and how to improve accuracy.</p>
+
+  <div class="g2">
+    <div class="req-p">
+      <h4>Practical 1 — Specific Heat Capacity (Topic 1)</h4>
+      <p><strong style="color:#fff">Aim:</strong> Measure the specific heat capacity of a material (e.g. aluminium block)</p>
+      <p style="margin:8px 0"><strong style="color:#fff">Method:</strong></p>
+      <ul>
+        <li>Measure mass of block (balance)</li>
+        <li>Insert immersion heater and thermometer into block</li>
+        <li>Measure initial temperature</li>
+        <li>Switch on heater; record energy (joule-meter or P×t) and temperature every minute</li>
+        <li>Plot temperature vs energy graph; gradient = 1/mc → c = 1/(m × gradient)</li>
+      </ul>
+      <p style="margin-top:8px"><strong style="color:#ffd740">Key formula:</strong> ΔE = mcΔθ → rearrange to c = ΔE/(mΔθ)</p>
+      <p><strong style="color:#ffd740">Errors:</strong> Heat lost to surroundings (insulate block); poor thermal contact (use thermal paste); energy going to heater itself</p>
+    </div>
+
+    <div class="req-p">
+      <h4>Practical 2 — IV Characteristics (Topic 2)</h4>
+      <p><strong style="color:#fff">Aim:</strong> Determine resistance of components and plot I-V graphs</p>
+      <ul>
+        <li>Connect component in series with ammeter and variable resistor</li>
+        <li>Connect voltmeter in parallel across component</li>
+        <li>Vary voltage using variable resistor; record V and I</li>
+        <li>Reverse connections to get negative values</li>
+        <li>Plot I (y-axis) vs V (x-axis)</li>
+      </ul>
+      <p style="margin-top:8px"><strong style="color:#ffd740">Key formula:</strong> R = V/I (gradient of V-I graph)</p>
+      <p><strong style="color:#ffd740">Errors:</strong> Component heats up → resistance changes; take readings quickly; use small currents</p>
+    </div>
+
+    <div class="req-p">
+      <h4>Practical 3 — Density of Materials (Topic 3)</h4>
+      <p><strong style="color:#fff">Aim:</strong> Measure density of regular and irregular solids, and liquids</p>
+      <ul>
+        <li><strong>Regular solid:</strong> measure dimensions with ruler/calipers → calculate V; mass on balance → ρ = m/V</li>
+        <li><strong>Irregular solid:</strong> displace water in measuring cylinder (eureka can); volume = water displaced</li>
+        <li><strong>Liquid:</strong> mass empty cylinder, add liquid, measure volume from scale → m(liquid) = m(total) − m(cylinder)</li>
+      </ul>
+      <p style="margin-top:8px"><strong style="color:#ffd740">Key formula:</strong> ρ = m/V (SI units: kg/m³ or g/cm³)</p>
+      <p><strong style="color:#ffd740">Errors:</strong> Trapped air bubbles; reading meniscus at eye level; not fully submerging irregular solid</p>
+    </div>
+
+    <div class="req-p">
+      <h4>Practical 4 — Radioactive Decay Simulation (Topic 4)</h4>
+      <p><strong style="color:#fff">Aim:</strong> Model radioactive decay using dice (or actual sources with GM tube)</p>
+      <ul>
+        <li><strong>Dice method:</strong> 100 dice in a bag; shake and remove all showing '6' (decayed); count remaining; repeat and record</li>
+        <li>Plot number remaining vs number of throws</li>
+        <li>Determine half-life (number of throws for N to halve)</li>
+        <li><strong>Real source:</strong> use GM tube to count clicks; subtract background count; plot count rate vs time</li>
+      </ul>
+      <p style="margin-top:8px"><strong style="color:#ffd740">Key point:</strong> Decay is random and spontaneous — individual events cannot be predicted</p>
+      <p><strong style="color:#ffd740">Errors:</strong> Must subtract background radiation; statistical variation with small samples</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     FORMULA CHEAT SHEET
+════════════════════════════════════════════ -->
+<div id="formulas" class="sec">
+  <div class="sec-head" style="border-color:#fb923c">
+    <span class="tnum" style="background:#fb923c;color:#000">REVISION</span>
+    <h2 style="color:#fb923c">Complete Formula Sheet</h2>
+  </div>
+  <p style="font-size:13px;color:#5a6a85;margin-bottom:16px">The equation sheet is provided — but you must know WHICH to choose and how to rearrange. <span class="hy">Yellow</span> = Higher only. <span class="htr">Green</span> = Triple/Physics only.</p>
+  <div class="fgrid">
+    <div class="f" style="border-color:#ff7043"><div class="fn">Kinetic Energy</div><div class="fe" style="color:#ff7043">KE = ½mv²</div><div class="fu">m=kg, v=m/s</div></div>
+    <div class="f" style="border-color:#ff7043"><div class="fn">Gravitational PE</div><div class="fe" style="color:#ff7043">GPE = mgh</div><div class="fu">g=9.8 N/kg (or 10)</div></div>
+    <div class="f" style="border-color:#ff7043"><div class="fn">Elastic PE</div><div class="fe" style="color:#ff7043">Ee = ½ke²</div><div class="fu">k=spring const (N/m)</div></div>
+    <div class="f" style="border-color:#ff7043"><div class="fn">Spec. Heat Cap.</div><div class="fe" style="color:#ff7043">ΔE = mcΔθ</div><div class="fu">c=J/kg°C</div></div>
+    <div class="f" style="border-color:#ff7043"><div class="fn">Power</div><div class="fe" style="color:#ff7043">P = E/t</div><div class="fu">P=W, E=J, t=s</div></div>
+    <div class="f" style="border-color:#ff7043"><div class="fn">Efficiency</div><div class="fe" style="color:#ff7043">η = Eu/Et</div><div class="fu">×100 for %; max=1.0</div></div>
+    <div class="f"><div class="fn">Ohm's Law</div><div class="fe">V = IR</div><div class="fu">V=V, I=A, R=Ω</div></div>
+    <div class="f"><div class="fn">Charge Flow</div><div class="fe">Q = It</div><div class="fu">Q=Coulombs (C)</div></div>
+    <div class="f"><div class="fn">Power (electrical)</div><div class="fe">P = IV = I²R</div><div class="fu">also E=QV, E=Pt</div></div>
+    <div class="f"><div class="fn">Series Resistance</div><div class="fe">R = R₁+R₂+…</div><div class="fu">R increases</div></div>
+    <div class="f ht"><div class="fn">Parallel Resistance ⭐</div><div class="fe">1/R=1/R₁+1/R₂</div><div class="fu">R decreases</div></div>
+    <div class="f trip"><div class="fn">Transformer Turns 🌿⭐</div><div class="fe">Vp/Vs = np/ns</div><div class="fu">Vp×Ip = Vs×Is</div></div>
+    <div class="f" style="border-color:#76ff03"><div class="fn">Density</div><div class="fe" style="color:#76ff03">ρ = m/V</div><div class="fu">ρ=kg/m³, V=m³</div></div>
+    <div class="f" style="border-color:#76ff03"><div class="fn">Specific Latent Heat</div><div class="fe" style="color:#76ff03">E = mL</div><div class="fu">L=J/kg</div></div>
+    <div class="f ht"><div class="fn">Boyle's Law ⭐</div><div class="fe">p₁V₁ = p₂V₂</div><div class="fu">constant temperature</div></div>
+    <div class="f ht"><div class="fn">Pressure-Temp ⭐</div><div class="fe">p₁/T₁ = p₂/T₂</div><div class="fu">T in KELVIN always!</div></div>
+    <div class="f ht"><div class="fn">Kelvin ⭐</div><div class="fe">T(K) = θ(°C)+273</div><div class="fu">abs.zero = 0 K</div></div>
+    <div class="f" style="border-color:#e040fb"><div class="fn">Half-Life</div><div class="fe" style="color:#e040fb">N = N₀ × (½)ⁿ</div><div class="fu">n = no. of half-lives</div></div>
+  </div>
+
+  <!-- FINAL EXAM TIPS -->
+  <div style="background:var(--surf);border:2px solid var(--e2);padding:24px;margin-top:28px">
+    <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--e2);text-transform:uppercase;margin-bottom:18px">🎯 Last-Minute Exam Tips</h3>
+    <div class="g2">
+      <ul class="fl t2">
+        <li>Always show your working — method marks even if answer is wrong</li>
+        <li>Always include units in your answer</li>
+        <li>For 6-mark questions, use PEEL: Point → Evidence → Explain → Link</li>
+        <li>Subtract background count rate before ALL radioactivity calculations</li>
+        <li>Kelvin — never use °C in gas law calculations</li>
+        <li>Efficiency is always a number ≤ 1.0 (or ≤ 100%) — if you get &gt;1, you've made an error</li>
+      </ul>
+      <ul class="fl t2">
+        <li>In series: current SAME everywhere; voltage divides</li>
+        <li>In parallel: voltage SAME in each branch; current divides</li>
+        <li>State changes: temp STAYS CONSTANT — say "energy breaks bonds"</li>
+        <li>Radioactive decay: always say "random AND spontaneous"</li>
+        <li>Nuclear notation: protons = atomic number = electrons (neutral atom)</li>
+        <li>For energy resources: mention reliability, cost, AND environmental impact</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="background:var(--surf);border-top:3px solid var(--e2);padding:24px;text-align:center;margin-top:48px">
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1px">AQA GCSE PHYSICS (8463) · PAPER 1 · TRIPLE / SEPARATE SCIENCE · TOPICS 1–4</p>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--e2);margin-top:8px;letter-spacing:1px">YOU'VE PREPARED. NOW GO GET THAT 9. 🚀</p>
+</div>
+
+<a href="#" class="top">↑ TOP</a>
+
+</body>
+</html>
